@@ -3,7 +3,7 @@
 </script>
 <template>
 	<div class="h-100" >
-    <v-carousel height="100vh">
+    <v-carousel height="100vh" hide-delimiters>
       <v-carousel-item
         src="@/assets/homepage/tulip-2189317_1920.jpg"
         height="100%"
