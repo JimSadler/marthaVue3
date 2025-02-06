@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <app-navigation />
     <v-main>
       <HelloWorld />
     </v-main>
@@ -10,4 +11,5 @@
 
 <script setup>
   //
+import AppNavigation from "@/components/AppNavigation.vue";
 </script>

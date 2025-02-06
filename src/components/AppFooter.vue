@@ -1,36 +1,146 @@
 <template>
-  <v-footer height="40" app>
-    <a
-      v-for="item in items"
-      :key="item.title"
-      :href="item.href"
-      :title="item.title"
-      class="d-inline-block mx-2 social-link"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <v-icon
-        :icon="item.icon"
-        :size="item.icon === '$vuetify' ? 24 : 16"
-      />
-    </a>
+  <div id="footer" class="px-10 py-3 border-t-sm bg-cyan-darken-4">
+    <section class="prefooter" >
+      <div class="columns">
+        <div class="">
+          <img alt="Martha Novak Website"  style="width: 2.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>
 
-    <div
-      class="text-caption text-disabled"
-      style="position: absolute; right: 16px;"
-    >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Vuetify, LLC</span>
-      —
-      <a
-        class="text-decoration-none on-surface"
-        href="https://vuetifyjs.com/about/licensing/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        MIT License
-      </a>
-    </div>
-  </v-footer>
+          <h2 class="title">
+            Martha Novak
+          </h2>
+        </div>
+        <div class="column is-full-mobile">
+          <!-- eslint-disable -->
+          <ul class="social-media">
+            <li>
+              <a
+                href="https://www.facebook.com/RealTalkwithMartha/"
+                target="_blank"
+                class="btn btn-facebook"
+              >
+                <!--<font-awesome-icon-->
+                <!--  :icon="{ prefix: 'fab', iconName: 'facebook-f' }"-->
+                <!--/>-->
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/MarthaBurgess"
+                target="_blank"
+                class="btn btn-twitter"
+              >
+                <!--<font-awesome-icon-->
+                <!--  :icon="{ prefix: 'fab', iconName: 'twitter' }"-->
+                <!--/>-->
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/marthaburgess"
+                target="_blank"
+                class="btn btn-dribble"
+              >
+                <!--<font-awesome-icon-->
+                <!--  :icon="{ prefix: 'fab', iconName: 'linkedin' }"-->
+                <!--/>-->
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCuNL9cW2ASL1a_slcgUKrQw"
+                target="_blank"
+                class="btn btn-youtube"
+              >
+                <!--<font-awesome-icon-->
+                <!--  :icon="{ prefix: 'fab', iconName: 'youtube' }"-->
+                <!--/>-->
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.meetup.com/Thursday-Night-Enlightenment/"
+                target="_blank"
+                class="btn btn-meetup"
+              >
+                <!--<font-awesome-icon-->
+                <!--  :icon="{ prefix: 'fab', iconName: 'meetup' }"-->
+                <!--/>-->
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footerNav">
+        <!-- <li class="footlink">
+          <nuxt-link to="/workshops">Workshops</nuxt-link>
+        </li>-->
+        <!-- <li class="footlink">
+          <nuxt-link to="/store">Store</nuxt-link>
+        </li>-->
+        <li class="footlink">
+          <!--<nuxt-link to="/contact">Contact</nuxt-link>-->
+        </li>
+        <li class="footlink">
+          <!--<nuxt-link to="/testimonial">Testimonials</nuxt-link>-->
+        </li>
+      </ul>
+    </section>
+    <footer class="site-footer">
+      <!--<span>-->
+      <!--  {{ $siteConfig.siteName }} &copy; {{ new Date().getFullYear() }} - All-->
+      <!--  Rights Reserved-->
+      <!--</span>-->
+      <span>
+        <br />
+        <!--<font-awesome-icon icon="cog" spin></font-awesome-icon>-->
+        website developed
+        by
+        <div class="jsLink">
+          <a target="_blank" class="animated" href="https://jsdevelopment.tech">
+            <!--<img-->
+            <!--  id="heart"-->
+            <!--  class="jsDevLogo animate__pulse"-->
+            <!--  src="~/assets/uploads/jsDevLogo.png"-->
+            <!--  alt-->
+            <!--/>-->
+            J.S. Development
+          </a>
+        </div>
+      </span>
+    </footer>
+  </div>
+  <!--<v-footer height="40" app>-->
+  <!--  <a-->
+  <!--    v-for="item in items"-->
+  <!--    :key="item.title"-->
+  <!--    :href="item.href"-->
+  <!--    :title="item.title"-->
+  <!--    class="d-inline-block mx-2 social-link"-->
+  <!--    rel="noopener noreferrer"-->
+  <!--    target="_blank"-->
+  <!--  >-->
+  <!--    <v-icon-->
+  <!--      :icon="item.icon"-->
+  <!--      :size="item.icon === '$vuetify' ? 24 : 16"-->
+  <!--    />-->
+  <!--  </a>-->
+
+  <!--  <div-->
+  <!--    class="text-caption text-disabled"-->
+  <!--    style="position: absolute; right: 16px;"-->
+  <!--  >-->
+  <!--    &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Vuetify, LLC</span>-->
+  <!--    —-->
+  <!--    <a-->
+  <!--      class="text-decoration-none on-surface"-->
+  <!--      href="https://vuetifyjs.com/about/licensing/"-->
+  <!--      rel="noopener noreferrer"-->
+  <!--      target="_blank"-->
+  <!--    >-->
+  <!--      MIT License-->
+  <!--    </a>-->
+  <!--  </div>-->
+  <!--</v-footer>-->
 </template>
 
 <script setup>
