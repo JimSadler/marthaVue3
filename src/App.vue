@@ -2,7 +2,8 @@
   <v-app>
     <app-navigation />
     <v-main>
-      <HelloWorld />
+      <!--<HelloWorld />-->
+      <home-view />
     </v-main>
 
     <AppFooter />
@@ -12,4 +13,5 @@
 <script setup>
   //
 import AppNavigation from "@/components/AppNavigation.vue";
+  import HomeView from "@/components/HomeView.vue";
 </script>
