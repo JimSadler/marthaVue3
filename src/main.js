@@ -5,6 +5,8 @@
  */
 
 // Plugins
+import 'animate.css';
+
 import { registerPlugins } from '@/plugins'
 
 // Components

@@ -1,6 +1,6 @@
 <template>
-  <div id="footer" class="px-10 py-3 border-t-sm bg-cyan-darken-4">
-    <section class="prefooter" >
+  <div id="footer" class=" border-t-sm">
+    <section class="footer-top bg-cyan-darken-4 px-10" >
       <div class="columns">
         <div class="">
           <img alt="Martha Novak Website"  style="width: 2.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>
@@ -70,41 +70,58 @@
           </ul>
         </div>
       </div>
-      <ul class="footerNav">
-        <!-- <li class="footlink">
-          <nuxt-link to="/workshops">Workshops</nuxt-link>
-        </li>-->
-        <!-- <li class="footlink">
-          <nuxt-link to="/store">Store</nuxt-link>
-        </li>-->
-        <li class="footlink">
-          <!--<nuxt-link to="/contact">Contact</nuxt-link>-->
-        </li>
-        <li class="footlink">
-          <!--<nuxt-link to="/testimonial">Testimonials</nuxt-link>-->
-        </li>
-      </ul>
+
     </section>
-    <footer class="site-footer">
-      <!--<span>-->
-      <!--  {{ $siteConfig.siteName }} &copy; {{ new Date().getFullYear() }} - All-->
-      <!--  Rights Reserved-->
-      <!--</span>-->
-      <span>
+    <footer class="footer-bottom bg-grey-darken-4 py-6">
+      <span class="d-flex justify-center">
+        Martha Novak &copy; {{ new Date().getFullYear() }} - All
+        Rights Reserved
+      </span>
+      <span class="d-flex justify-center">
         <br />
-        <!--<font-awesome-icon icon="cog" spin></font-awesome-icon>-->
-        website developed
+        <v-icon size="small" spin class="spin-icon mr-2">mdi-cog</v-icon>
+        developed
         by
         <div class="jsLink">
-          <a target="_blank" class="animated" href="https://jsdevelopment.tech">
-            <!--<img-->
-            <!--  id="heart"-->
-            <!--  class="jsDevLogo animate__pulse"-->
-            <!--  src="~/assets/uploads/jsDevLogo.png"-->
-            <!--  alt-->
-            <!--/>-->
-            J.S. Development
-          </a>
+          <v-tooltip text="JS Development" >
+            <template v-slot:activator="{ props }">
+              <a target="_blank" v-bind="props" class="animate__animated animate__bounce text-body-2" href="https://jsdevelopment.io">
+                  <img
+                    id="heart"
+                    class="jsDevLogo animate__pulse ml-3 "
+                    src="@/assets/jsDevLogo.png"
+                    alt="JS Development"
+                    style="width: 25.5%;"
+                  />
+              </a>
+            </template>
+          </v-tooltip>
+          <!--<v-tooltip >-->
+          <!--  <template v-slot:activator="{ on }">-->
+          <!--    <a target="_blank" class="animated" href="https://jsdevelopment.tech">-->
+          <!--        <img-->
+          <!--        id="heart"-->
+          <!--        class="jsDevLogo animate__pulse ml-3 "-->
+          <!--        src="@/assets/jsDevLogo.png"-->
+          <!--        alt="JS Development"-->
+          <!--        style="width: 15.5%;"-->
+          <!--      />-->
+          <!--    </a>-->
+          <!--  </template>-->
+          <!--  <span>JS Development</span>-->
+          <!--</v-tooltip>-->
+          <!--<a target="_blank" class="animated" href="https://jsdevelopment.tech">-->
+          <!--  <span>-->
+          <!--    <img-->
+          <!--    id="heart"-->
+          <!--    class="jsDevLogo animate__pulse ml-3 "-->
+          <!--    src="@/assets/jsDevLogo.png"-->
+          <!--    alt-->
+          <!--    style="width: 25.5%;"-->
+          <!--  />-->
+          <!--  </span>-->
+          <!-- &lt;!&ndash;<span class="mt-n4"> J.S. Development</span>&ndash;&gt;-->
+          <!--</a>-->
         </div>
       </span>
     </footer>
@@ -144,6 +161,7 @@
 </template>
 
 <script setup>
+import 'animate.css';
   const items = [
     {
       title: 'Vuetify Documentation',
@@ -178,12 +196,15 @@
   ]
 </script>
 
-<style scoped lang="sass">
-  .social-link :deep(.v-icon)
-    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity))
-    text-decoration: none
-    transition: .2s ease-in-out
+<style scoped lang="scss">
 
-    &:hover
-      color: rgba(25, 118, 210, 1)
+.spin-icon {
+  -webkit-animation: spin 2s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0%  {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+
 </style>
