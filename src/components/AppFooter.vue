@@ -1,89 +1,87 @@
 <template>
-  <div id="footer" class=" border-t-sm">
-    <section class="footer-top bg-cyan-darken-4 px-10" >
-      <div class="columns">
-        <div class="">
-          <img alt="Martha Novak Website"  style="width: 2.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>
+  <footer id="footer" class=" border-t-sm">
+    <section class="footer-top bg-cyan-darken-4 px-10 py-5" >
+      <v-row class="columns">
+        <v-col cols="6" class="">
+          <img alt="Martha Novak Website"  style="width: 5.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>
 
           <h2 class="title">
             Martha Novak
           </h2>
-        </div>
-        <div class="column is-full-mobile">
+          <ul style="list-style: none">
+            <li class="footlink d-inline-block mr-2">
+              <a href="/contact">Contact</a>
+            </li>
+            <li class="footlink d-inline-block mx-2">
+              <a href="/testimonial">Testimonials</a>
+            </li>
+          </ul>
+        </v-col>
+        <v-col cols="6" class="">
           <!-- eslint-disable -->
-          <ul class="social-media">
-            <li>
+          <ul class="social-media d-flex justify-end pt-15" style="list-style: none;">
+            <li class="mx-2">
               <a
                 href="https://www.facebook.com/RealTalkwithMartha/"
                 target="_blank"
                 class="btn btn-facebook"
               >
-                <!--<font-awesome-icon-->
-                <!--  :icon="{ prefix: 'fab', iconName: 'facebook-f' }"-->
-                <!--/>-->
+                <v-icon size="x-large">mdi-facebook</v-icon>
               </a>
             </li>
-            <li>
+            <li class="mx-2">
               <a
                 href="https://twitter.com/MarthaBurgess"
                 target="_blank"
                 class="btn btn-twitter"
               >
-                <!--<font-awesome-icon-->
-                <!--  :icon="{ prefix: 'fab', iconName: 'twitter' }"-->
-                <!--/>-->
+                <v-icon size="x-large">mdi-twitter</v-icon>
               </a>
             </li>
-            <li>
+            <li class="mx-2">
               <a
                 href="https://www.linkedin.com/in/marthaburgess"
                 target="_blank"
                 class="btn btn-dribble"
               >
-                <!--<font-awesome-icon-->
-                <!--  :icon="{ prefix: 'fab', iconName: 'linkedin' }"-->
-                <!--/>-->
+                <v-icon size="x-large">mdi-linkedin</v-icon>
               </a>
             </li>
-            <li>
+            <li class="mx-2">
               <a
                 href="https://www.youtube.com/channel/UCuNL9cW2ASL1a_slcgUKrQw"
                 target="_blank"
                 class="btn btn-youtube"
               >
-                <!--<font-awesome-icon-->
-                <!--  :icon="{ prefix: 'fab', iconName: 'youtube' }"-->
-                <!--/>-->
+                <v-icon size="x-large">mdi-youtube</v-icon>
               </a>
             </li>
-            <li>
+            <li class="mx-2">
               <a
                 href="https://www.meetup.com/Thursday-Night-Enlightenment/"
                 target="_blank"
                 class="btn btn-meetup"
               >
-                <!--<font-awesome-icon-->
-                <!--  :icon="{ prefix: 'fab', iconName: 'meetup' }"-->
-                <!--/>-->
+                <v-icon size="x-large">mdi-meet-up</v-icon>
               </a>
             </li>
           </ul>
-        </div>
-      </div>
+        </v-col>
+      </v-row>
 
     </section>
-    <footer class="footer-bottom bg-grey-darken-4 py-6">
-      <span class="d-flex justify-center">
+    <section class="footer-bottom bg-grey-darken-4 py-3">
+      <span class="d-flex justify-center text-body-2">
         Martha Novak &copy; {{ new Date().getFullYear() }} - All
         Rights Reserved
       </span>
-      <span class="d-flex justify-center">
+      <span class="d-flex justify-center text-body-2 mt-2">
         <br />
         <v-icon size="small" spin class="spin-icon mr-2">mdi-cog</v-icon>
         developed
         by
         <div class="jsLink">
-          <v-tooltip text="JS Development" >
+          <v-tooltip text="JS Development" class="text-body-2" >
             <template v-slot:activator="{ props }">
               <a target="_blank" v-bind="props" class="animate__animated animate__bounce text-body-2" href="https://jsdevelopment.io">
                   <img
@@ -96,36 +94,10 @@
               </a>
             </template>
           </v-tooltip>
-          <!--<v-tooltip >-->
-          <!--  <template v-slot:activator="{ on }">-->
-          <!--    <a target="_blank" class="animated" href="https://jsdevelopment.tech">-->
-          <!--        <img-->
-          <!--        id="heart"-->
-          <!--        class="jsDevLogo animate__pulse ml-3 "-->
-          <!--        src="@/assets/jsDevLogo.png"-->
-          <!--        alt="JS Development"-->
-          <!--        style="width: 15.5%;"-->
-          <!--      />-->
-          <!--    </a>-->
-          <!--  </template>-->
-          <!--  <span>JS Development</span>-->
-          <!--</v-tooltip>-->
-          <!--<a target="_blank" class="animated" href="https://jsdevelopment.tech">-->
-          <!--  <span>-->
-          <!--    <img-->
-          <!--    id="heart"-->
-          <!--    class="jsDevLogo animate__pulse ml-3 "-->
-          <!--    src="@/assets/jsDevLogo.png"-->
-          <!--    alt-->
-          <!--    style="width: 25.5%;"-->
-          <!--  />-->
-          <!--  </span>-->
-          <!-- &lt;!&ndash;<span class="mt-n4"> J.S. Development</span>&ndash;&gt;-->
-          <!--</a>-->
         </div>
       </span>
-    </footer>
-  </div>
+    </section>
+  </footer>
   <!--<v-footer height="40" app>-->
   <!--  <a-->
   <!--    v-for="item in items"-->
@@ -196,8 +168,7 @@ import 'animate.css';
   ]
 </script>
 
-<style scoped lang="scss">
-
+<style scoped >
 .spin-icon {
   -webkit-animation: spin 2s infinite linear;
 }
@@ -206,5 +177,14 @@ import 'animate.css';
   0%  {-webkit-transform: rotate(0deg);}
   100% {-webkit-transform: rotate(360deg);}
 }
-
+li.footlink a:hover,
+li.footlink a:focus {
+  color: #f9b54a;
+  text-decoration: underline;
+}
+section.footer-top a {
+  color: ghostwhite;
+  transition: 0.5s ease all;
+  font-weight: 600;
+}
 </style>
