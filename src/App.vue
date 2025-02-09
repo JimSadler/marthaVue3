@@ -13,5 +13,6 @@
 <script setup>
   //
 import AppNavigation from "@/components/AppNavigation.vue";
-  import HomeView from "@/components/HomeView.vue";
+  import HomeView from "@/views/HomeView.vue";
+  import AppFooter from "@/components/AppFooter.vue";
 </script>

@@ -1,19 +1,15 @@
 <script setup>
 import { ref} from 'vue';
-const items = ref( [
-  { title: 'Click Me' },
-  { title: 'Click Me' },
-  { title: 'Click Me' },
-  { title: 'Click Me 2' },
-],);
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+function toPeoples() {
+  console.log('toPeoples',router.currentRoute)
+  router.push('/people')
+}
 const drawer = ref(null)
-// const menuItems = [
-//   { title: 'Dashboard', icon: 'mdi-view-dashboard', path: '/dashboard' },
-//   { title: 'Participants', icon: 'mdi-account-group', path: '/participants' },
-//   { title: 'Treatment Protocols', icon: 'mdi-file-document', path: '/treatment-protocols' },
-//   { title: 'Users', icon: 'mdi-account', path: '/users' },
-//   { title: 'Settings', icon: 'mdi-cog', path: '/settings' },
-// ];
 </script>
 <template>
   <v-app-bar
@@ -28,7 +24,7 @@ const drawer = ref(null)
         tabindex="0"
         href="/"
         target="_blank"
-        aria-label="National Cancer Institute at the National Institutes of Health"
+        aria-label="Martha Novak Website"
       >
         <img alt="Martha Novak Website" class='ml-5 mr-5 mt-1 d-inline-block' style="width: 26.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>
       </a>
@@ -46,30 +42,54 @@ const drawer = ref(null)
     <v-spacer></v-spacer>
       <ul class="d-flex px-5" style="list-style-type: none;">
         <li class="mx-2">
-          <router-link to="/">
+          <v-btn to="/">
             <v-icon>mdi-home</v-icon>
             Home
-          </router-link>
+          </v-btn>
         </li>
         <li class="mx-2">
-          <router-link to="/about">
-            <v-icon>mdi-account</v-icon>
-            About
-          </router-link>
-        </li>
-        <li class="mx-2">
-          <router-link to="/about">
-            <v-icon>mdi-book</v-icon>
-            Books
-          </router-link>
-        </li>
-        <li class="mx-2">
-          <router-link to="/about">
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn
+                color="primary"
+                v-bind="props"
+                append-icon="mdi-chevron-down"
+              >
+                About
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item>
+                <v-btn @click="toPeoples">
+                  <v-list-item-title>Our People</v-list-item-title>
+                </v-btn>
+              </v-list-item>
+              <!--<v-list-item>-->
+              <!--  <v-btn to="/what-we-do">-->
+              <!--    <v-list-item-title>What We Do</v-list-item-title>-->
+              <!--  </v-btn>-->
+              <!--</v-list-item>-->
 
-            <v-icon>mdi-store</v-icon>
-            Store
-          </router-link>
+            </v-list>
+          </v-menu>
+          <!--<v-btn to="/about">-->
+          <!--  <v-icon>mdi-account</v-icon>-->
+          <!--  About-->
+          <!--</v-btn>-->
         </li>
+        <!--<li class="mx-2">-->
+        <!--  <v-btn to="/about">-->
+        <!--    <v-icon>mdi-book</v-icon>-->
+        <!--    Books-->
+        <!--  </v-btn>-->
+        <!--</li>-->
+        <!--<li class="mx-2">-->
+        <!--  <v-btn to="/about">-->
+
+        <!--    <v-icon>mdi-store</v-icon>-->
+        <!--    Store-->
+        <!--  </v-btn>-->
+        <!--</li>-->
       </ul>
     <!-- history menu -->
     <!-- <HistoryMenu /> -->
