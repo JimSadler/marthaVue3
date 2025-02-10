@@ -2,7 +2,7 @@
 </script>
 <template>
 	<div class="py-10 mt-10" style="height: 100vh;">
-        <h1>Our People</h1>
+        <h1>Contact</h1>
 	</div>
 </template>
 
