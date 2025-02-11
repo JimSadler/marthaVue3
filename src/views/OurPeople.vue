@@ -1,11 +1,105 @@
 <script setup>
+import {recentArticles} from '@/services/constants.js';
 </script>
 <template>
-	<div class="py-10 mt-10" style="height: 100vh;">
-        <h1>Our People</h1>
+	<div class="py-10 mt-15 text-center align-center quarter-header">
+        <h1 class="mt-15">Our People</h1>
 	</div>
+  <div class="three-quarter-page py-5">
+    <div class="two-to-one-grid px-15">
+      <div>
+        <div class="d-flex justify-end py-5 martha border-b-sm">
+            <div class="mr-5">
+              <v-img
+                class="animate__animated animate__fadeIn"
+
+                src="@/assets/people/martha0.jpg"
+                height="250px"
+                width="250px"
+                style="border-radius: 8px;"
+              ></v-img>
+            </div>
+            <div>
+              <h2 class="text-h5">Martha</h2>
+              <p class="my-3">
+                Martha Novak has a unique roadmap which takes you from awareness
+                to consciousness to the enlightened life that is yours for the
+                choosing. It is unlike any healing journey you have ever
+                experienced. By releasing you once and for all from habitual
+                emotional clutter and circular thinking, you are freed from the
+                hold of the past to move fully into your dynamic present. Here you
+                find deep levels of peace, compassion and forgiveness for yourself
+                and others. Here you begin to live the powerful and
+                ever-expanding, abundant life that is yours in the fullness of
+                God.
+              </p>
+              <p class="my-3">
+                It is here in the fullness of God, where you live your life in
+                complete authenticity. In advanced stages of consciousness, you
+                experience the enlightened life, free from anxiety and fear.
+                Instead, your life is filled with ever increasing joy, passion and
+                potential. You live your truth, you know that you are limited by
+                nothing, you know that you are pure, creative potential as your
+                mind is sharply focused to create the life you want.
+              </p>
+              <p class="my-3">
+                If this sounds too good to be true, you do not know Martha. She is
+                a powerful spiritual teacher, healer, and emotional intuitive who,
+                over her lifetime, has developed a life-changing system of
+                training, not only for business, but also for spirituality in
+                every aspect of daily life. It is called The Burgess Process and
+                it teaches that everything is the spiritual journey.
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="border-s-sm recent-articles py-5 text-left px-5">
+        <h2>Recent Articles</h2>
+        <div>
+          <v-card class="mb-5 w-50 mt-5" elevation="0" v-for="(article, index) in recentArticles" :key="index">
+            <v-img
+              class="animate__animated animate__flipInX animate__delay-1s"
+              :src="article.image"
+              height="150px"
+              width="300px"
+              cover
+            ></v-img>
+            <v-card-title class="">
+              <h3 class="text-subtitle-1">{{ article.title }}</h3>
+            </v-card-title>
+            <v-card-text class="grey-lighten-1 ">
+              <p class="text-grey-lighten-1">Author: {{ article.params.author }} | Published on: {{ article.params.date }}</p>
+            </v-card-text>
+          </v-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
+   .quarter-header {
+     width: 100%;
+     height: 40vh;
+    background-image: url('@/assets/people/footprints-1145883_1920.jpg');
+     background-size: cover;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+   }
+   .three-quarter-page {
+     width: 100%;
+     //height: 60vh;
+     padding: 1rem;
+   }
+    .two-to-one-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+    }
+    .recent-articles {
+      //height: 54vh;
+    }
 </style>
