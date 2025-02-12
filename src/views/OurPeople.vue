@@ -3,7 +3,7 @@ import {recentArticles, masterFacilitators} from '@/services/constants.js';
 import AppRecentArticles from "@/components/AppRecentArticles.vue";
 </script>
 <template>
-	<div class="py-10 mt-15 text-center align-center quarter-header">
+	<div class="py-10 mt-15 text-center align-center quarter-header ">
         <h1 class="mt-15">Our People</h1>
 	</div>
   <div class="three-quarter-page py-5">
@@ -96,15 +96,7 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
 
 <style lang="scss" scoped>
    .quarter-header {
-     width: 100%;
-     height: 40vh;
     background-image: url('@/assets/people/footprints-1145883_1920.jpg');
-     background-size: cover;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
    }
    .three-quarter-page {
      width: 100%;
@@ -116,7 +108,5 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
       grid-template-columns: 2fr 1fr;
       gap: 1rem;
     }
-    .recent-articles {
-      //height: 54vh;
-    }
+
 </style>
