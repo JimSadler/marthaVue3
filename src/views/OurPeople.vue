@@ -1,5 +1,6 @@
 <script setup>
 import {recentArticles, masterFacilitators} from '@/services/constants.js';
+import AppRecentArticles from "@/components/AppRecentArticles.vue";
 </script>
 <template>
 	<div class="py-10 mt-15 text-center align-center quarter-header">
@@ -21,7 +22,7 @@ import {recentArticles, masterFacilitators} from '@/services/constants.js';
               ></v-img>
             </div>
             <div>
-              <h2 class="text-h5">Martha</h2>
+              <h2 class="font-weight-regular">Martha</h2>
               <p class="my-3">
                 Martha Novak has a unique roadmap which takes you from awareness
                 to consciousness to the enlightened life that is yours for the
@@ -55,13 +56,13 @@ import {recentArticles, masterFacilitators} from '@/services/constants.js';
           </div>
       <!--  master facilitators-->
         <div>
-          <h2 class="font-weight-regular text-h6 text-center mt-5"> Certified Master Facilitators</h2>
+          <h2 class="font-weight-regular text-center mt-5"> Certified Master Facilitators</h2>
         <!--  facilitator-->
           <div v-for="(facilitator, index) in masterFacilitators" :key="index">
 
             <div class="d-flex mt-5 px-15">
               <v-img
-                class="animate__animated animate__fadeIn"
+                class="animate__animated animate__fadeInLeft animate__delay-1s"
                 :src="facilitator.image"
                 height="209px"
                 width="209px"
@@ -87,24 +88,7 @@ import {recentArticles, masterFacilitators} from '@/services/constants.js';
         </div>
       </div>
       <div class="border-s-sm recent-articles py-5 text-left px-5">
-        <h2>Recent Articles</h2>
-        <div>
-          <v-card class="mb-5 w-50 mt-5" elevation="0" v-for="(article, index) in recentArticles" :key="index">
-            <v-img
-              class="animate__animated animate__flipInX animate__delay-1s"
-              :src="article.image"
-              height="150px"
-              width="300px"
-              cover
-            ></v-img>
-            <v-card-title class="">
-              <h3 class="text-subtitle-1">{{ article.title }}</h3>
-            </v-card-title>
-            <v-card-text class="grey-lighten-1 ">
-              <p class="text-grey-lighten-1">Author: {{ article.params.author }} | Published on: {{ article.params.date }}</p>
-            </v-card-text>
-          </v-card>
-        </div>
+        <app-recent-articles />
       </div>
     </div>
   </div>
