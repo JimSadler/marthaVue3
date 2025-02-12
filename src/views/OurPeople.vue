@@ -1,5 +1,5 @@
 <script setup>
-import {recentArticles} from '@/services/constants.js';
+import {recentArticles, masterFacilitators} from '@/services/constants.js';
 </script>
 <template>
 	<div class="py-10 mt-15 text-center align-center quarter-header">
@@ -8,6 +8,7 @@ import {recentArticles} from '@/services/constants.js';
   <div class="three-quarter-page py-5">
     <div class="two-to-one-grid px-15">
       <div>
+        <!--martha-->
         <div class="d-flex justify-end py-5 martha border-b-sm">
             <div class="mr-5">
               <v-img
@@ -52,6 +53,38 @@ import {recentArticles} from '@/services/constants.js';
               </p>
             </div>
           </div>
+      <!--  master facilitators-->
+        <div>
+          <h2 class="font-weight-regular text-h6 text-center mt-5"> Certified Master Facilitators</h2>
+        <!--  facilitator-->
+          <div v-for="(facilitator, index) in masterFacilitators" :key="index">
+
+            <div class="d-flex mt-5 px-15">
+              <v-img
+                class="animate__animated animate__fadeIn"
+                :src="facilitator.image"
+                height="209px"
+                width="209px"
+                style="border-radius: 8px;"
+              />
+              <div class="px-16 ml-5">
+                <h3 class="font-weight-regular">{{ facilitator.name }}</h3>
+                <div>{{ facilitator.bio }}</div>
+                <v-list class="">
+                  <v-list-item v-for="(link,key,j) in facilitator.links" :key="j" class="d-inline-block">
+                    <!--<a :href="link" target="_blank">-->
+                    <!--  <v-icon>mdi-{{key}}</v-icon>-->
+                    <!--</a>-->
+                    <v-btn :icon="`mdi-${key}`"  :href="link" target="_blank" variant="text"></v-btn>
+                    <!--<v-fab :icon="`mdi-${key}`" variant="text" :href="link" target="_blank"></v-fab>-->
+                    <!--<v-icon>mdi-{{key}}</v-icon>-->
+                  </v-list-item>
+                </v-list>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
       <div class="border-s-sm recent-articles py-5 text-left px-5">
         <h2>Recent Articles</h2>
