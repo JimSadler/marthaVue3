@@ -25,15 +25,41 @@ import AppFooter from "@/components/AppFooter.vue";
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s ease-in-out;
 }
-.quarter-header {
-  width: 100%;
+.hero {
   height: 40vh;
-  background-size: cover;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  margin-top: 65px;
+  background-size: cover !important;
+  background-position: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  &.is-medium {
+    height: 40vh;
+  }
+  &.hero:after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-body {
+    margin-top: 8%;
+    font-size: 2.2rem;
+  }
 }
 .three-quarter-page {
   width: 100%;

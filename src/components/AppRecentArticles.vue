@@ -14,10 +14,10 @@ import {recentArticles} from "@/services/constants.js";
         cover
       ></v-img>
       <v-card-title class="">
-        <h3 class="text-subtitle-1">{{ article.title }}</h3>
+        <h3 class="text-subtitle-1 font-weight-light">{{ article.title }}</h3>
       </v-card-title>
       <v-card-text class="grey-lighten-1 ">
-        <p class="text-grey-lighten-1">Author: {{ article.params.author }} | Published on: {{ article.params.date }}</p>
+        <p class="text-grey-darken-1 font-weight-light">Author: {{ article.params.author }} | Published on: {{ article.params.date }}</p>
       </v-card-text>
     </v-card>
   </div>

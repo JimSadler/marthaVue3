@@ -3,9 +3,27 @@ import {recentArticles, masterFacilitators} from '@/services/constants.js';
 import AppRecentArticles from "@/components/AppRecentArticles.vue";
 </script>
 <template>
-	<div class="py-10 mt-15 text-center align-center quarter-header ">
-        <h1 class="mt-15">Our People</h1>
-	</div>
+
+  <section
+    :class="`hero is-medium`"
+  >
+    <img
+      alt
+      class="hero-bg-img"
+      src="@/assets/people/footprints-1145883_1920.jpg"
+    />
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title animate__animated animate__fadeInUp text-white font-weight-light">
+          Our People
+        </h1>
+        <!--<h2 class="subtitle animated fadeInUp slower">-->
+        <!--  {{ subtitle }}-->
+        <!--</h2>-->
+        <!--<br />-->
+      </div>
+    </div>
+  </section>
   <div class="three-quarter-page py-5">
     <div class="two-to-one-grid px-15">
       <div>
@@ -23,7 +41,7 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
             </div>
             <div>
               <h2 class="font-weight-regular">Martha</h2>
-              <p class="my-3">
+              <p class="my-3 font-weight-light">
                 Martha Novak has a unique roadmap which takes you from awareness
                 to consciousness to the enlightened life that is yours for the
                 choosing. It is unlike any healing journey you have ever
@@ -35,7 +53,7 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
                 ever-expanding, abundant life that is yours in the fullness of
                 God.
               </p>
-              <p class="my-3">
+              <p class="my-3 font-weight-light">
                 It is here in the fullness of God, where you live your life in
                 complete authenticity. In advanced stages of consciousness, you
                 experience the enlightened life, free from anxiety and fear.
@@ -44,7 +62,7 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
                 nothing, you know that you are pure, creative potential as your
                 mind is sharply focused to create the life you want.
               </p>
-              <p class="my-3">
+              <p class="my-3 font-weight-light">
                 If this sounds too good to be true, you do not know Martha. She is
                 a powerful spiritual teacher, healer, and emotional intuitive who,
                 over her lifetime, has developed a life-changing system of
@@ -70,7 +88,7 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
               />
               <div class="px-16 ml-5">
                 <h3 class="font-weight-regular">{{ facilitator.name }}</h3>
-                <div>{{ facilitator.bio }}</div>
+                <p class="font-weight-light">{{ facilitator.bio }}</p>
                 <v-list class="">
                   <v-list-item v-for="(link,key,j) in facilitator.links" :key="j" class="d-inline-block">
                     <!--<a :href="link" target="_blank">-->
@@ -98,15 +116,15 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
    .quarter-header {
     background-image: url('@/assets/people/footprints-1145883_1920.jpg');
    }
-   .three-quarter-page {
-     width: 100%;
-     //height: 60vh;
-     padding: 1rem;
-   }
-    .two-to-one-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1rem;
-    }
+   //.three-quarter-page {
+   //  width: 100%;
+   //  //height: 60vh;
+   //  padding: 1rem;
+   //}
+   // .two-to-one-grid {
+   //   display: grid;
+   //   grid-template-columns: 2fr 1fr;
+   //   gap: 1rem;
+   // }
 
 </style>
