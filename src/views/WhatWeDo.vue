@@ -1,7 +1,11 @@
 <script setup>
+import { ref } from 'vue';
 import {infiniteInsights} from '@/services/constants.js';
 
 import AppRecentArticles from "@/components/AppRecentArticles.vue";
+const panelsModel = ref('advantage');
+
+
 </script>
 <template>
   <section
@@ -52,14 +56,21 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
             with Martha and with Infinite Insight for years.
           </p></div>
         <div class="insights mt-10">
-          <v-expansion-panels>
-            <v-expansion-panel v-for="(insight, index) in infiniteInsights" :key="index">
+          <v-expansion-panels v-model="panelsModel" variant="popout" multiple>
+            <v-expansion-panel :value="insight.id" v-for="(insight, index) in infiniteInsights" :key="index" >
               <v-expansion-panel-title>
-                {{ insight.title }}
+                <div class="font-weight-light text-body-1"> {{ insight.title }}</div>
               </v-expansion-panel-title>
               <v-expansion-panel-text>
-                <p class="font-weight-light my-3" v-for="(description,d) in insight.descriptions" :key="d">{{description}} <br /></p>
+                <p  v-if="insight.id !== 'process'" class="font-weight-light text-body-1 my-3" v-for="(description,d) in insight.descriptions" :key="d">{{description}} <br /></p>
+                <div v-else>
+                  <div v-for="(process, p) in insight.descriptions" :key="p" class="my-3">
+                    <p class="font-weight-medium text-body-1">{{process.title}}</p>
+                      <p class="font-weight-light text-body-1">{{process.text}}</p>
+                  </div>
+                </div>
               </v-expansion-panel-text>
+
             </v-expansion-panel>
           </v-expansion-panels>
         </div>
@@ -72,6 +83,9 @@ import AppRecentArticles from "@/components/AppRecentArticles.vue";
 </template>
 
 <style lang="scss" scoped>
+.v-expansion-panel-title--active {
+  background-color: #f5f5f5;
+}
 //.hero {
 //  height: 40vh;
 //  margin-top: 65px;

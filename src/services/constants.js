@@ -67,6 +67,7 @@ export const masterFacilitators = [
 ]
 export const infiniteInsights = [
   {
+    id:'advantage',
     title:'The Infinite Insight Advantage',
     descriptions:[
     'What is the difference between a good coach and a great one? Being a great coach requires out-of-the-box thinking, exceptional insight and the ability to assess with neutrality. A great coach is an expert communicator who links you to your potential. It’s easy to detect bad coaches: their methods don’t lead to the power of your potential. Instead they ask you to imitate their potential.',
@@ -74,6 +75,7 @@ export const infiniteInsights = [
     ]
   },
   {
+    id:'business',
     title:'The Infinite Insight for Business',
     descriptions: [
       'The Process defines a system of peak performance which allows people to generate high energy on command without anxiety. this method of achieving peak performance energy far exceeds generic business-seminar-style peak performance training. It renders visibility, bestows the dynamic of all great leadership, and opens the door to consistantly high levels of accomplishment through peak perfromance behaviors.',
@@ -82,6 +84,7 @@ export const infiniteInsights = [
 
   },
   {
+    id:'performance',
     title:'Performance Training',
     descriptions: [
       'Martha Novak, LLC. is a full-service firm dedicated to improving the executive, management, employee, and customer experience. We teach companies, teams and individuals how to stand out and deliver a high caliber performance in today\'s competitive marketplace',
@@ -92,16 +95,30 @@ export const infiniteInsights = [
 
   },
   {
+    id:'process',
     title:'The Infinite Insight Process',
     descriptions: [
-      'With her trademark evaluation, Martha Novak assesses the individual\'s learning and communication process and provides companies with graphs of the results. We interpret the charts for you, teach you how to interpret them for future use, and present the information to the company according to your needs – suggesting the best team and/or job restructuring to management, running team comparisons, assessing individual performance, predicting conflicts, and presenting solutions. Our Learning and Communication Sequence (LCS) Assessments are an invaluable tool when hiring, merging, acquiring or downsizing.',
-      'Martha Novak,LLC. conducts extensive research before we begin. We interveiw, privately and confidentially, anyone the company designates, including but not limited to its executive officers. We discover strenghts and challenges, and devise efficient strategies to address each.',
-      'Peak Performance Improvement (PPI) Training is a methodic approach, tailor-made to your organization and its needs. Employee by employee, we show your company how to work at higher levels of performance. Systematic Access is the hands on coaching process for the executives, teams and individuals within your organization. We take the quickest route to help break old patterns that no longer serve your organization and its goals, and train people to adopt more powerful behaviors. You’ll see performance improve markedly, and immediately.',
-      'After implementation of Infinite Insight, we sit down with you and determine how far you’ve come and where you want to go next. At this time, we may conduct more interviews, survey your new image, or design an itinerary that will guide you further on your journey, helping you choose and arrive at the next, more ambitious destination.'
+      {
+        title: 'Overview',
+          text:'With her trademark evaluation, Martha Novak assesses the individual\'s learning and communication process and provides companies with graphs of the results. We interpret the charts for you, teach you how to interpret them for future use, and present the information to the company according to your needs – suggesting the best team and/or job restructuring to management, running team comparisons, assessing individual performance, predicting conflicts, and presenting solutions. Our Learning and Communication Sequence (LCS) Assessments are an invaluable tool when hiring, merging, acquiring or downsizing.'
+      },
+      {
+        title:'II.Interview and Discovery',
+        text:'Martha Novak,LLC. conducts extensive research before we begin. We interveiw, privately and confidentially, anyone the company designates, including but not limited to its executive officers. We discover strenghts and challenges, and devise efficient strategies to address each.',
+      },
+      {
+        title:'III. PPI Training and Systematic Access',
+        text:'Peak Performance Improvement (PPI) Training is a methodic approach, tailor-made to your organization and its needs. Employee by employee, we show your company how to work at higher levels of performance. Systematic Access is the hands on coaching process for the executives, teams and individuals within your organization. We take the quickest route to help break old patterns that no longer serve your organization and its goals, and train people to adopt more powerful behaviors. You’ll see performance improve markedly, and immediately.'
+      },
+      {
+        title:'IV. Planning and Evaluation',
+        text:'After implementation of Infinite Insight, we sit down with you and determine how far you’ve come and where you want to go next. At this time, we may conduct more interviews, survey your new image, or design an itinerary that will guide you further on your journey, helping you choose and arrive at the next, more ambitious destination.'
+      }
     ]
 
   },
   {
+    id:'lcs',
     title:'The LCS',
     descriptions: [
       'What the LCS is: it is an assessment of how one learns and communicates. It is based on the triunal brain system, meaning that there are three parts of the brain that control three specific processes. These three centers are measured by this assessment and the information determines a series of unique learning and communication sequences that cut right to the heart of the individual and how they are performing.',
@@ -113,3 +130,34 @@ export const infiniteInsights = [
 
 
 ]
+export const books = {
+  blood_mountain: {
+    title:'Blood Mountain',
+    image: new URL(`@/assets/books/bloodMountainCover.jpg`, import.meta.url).href,
+    description:[
+      'Kate Adair is a New York investigative reporter targeting two things, a serial killer and a Pulitzer. When the first sets her in his sights, it is Kate who becomes the target.',
+      'Taken to the North Carolina mountains to hide out, Kate\'s investigation takes a turn. These mountains hold secrets for Kate. She knows this place, yet nothing seems familiar.',
+      'Isolated in these mountains, Kate meets people and discovers places that challenge everything she knows to be true.',
+      'As Kate peels back the layers of the past, she finds herself at the center of the story—a story of family, sacrifice, a mother\'s love and murder.'
+    ],
+    links: []
+  },
+  teacup_prophecies: {
+    title:'Teacup Prophecies',
+    image: new URL(`@/assets/books/teacup-cover.jpg`, import.meta.url).href,
+    description:[
+      'This book is filled with ascended messages to life’s most pressing questions. Culled from the radio shows, teachings, writings and philosophy of Martha Novak, spiritual teacher, author, and lecturer, these answers will take you to the center of who you are as your Highest Self and, from an egoic perspective, they will challenge you to be more. Each message is teacup size, sometimes esoteric and sometimes triggering more than a little thought. Don’t be deceived by their size, these little tidbits, they pack a punch. Rest assured, it will be your message, just for you, made possible and brought to you by… you.'
+    ],
+    links: []
+  },
+  the_life_you_want: {
+    title:'The Life You Want',
+    image: new URL(`@/assets/books/lifeyouwant.jpg`, import.meta.url).href,
+    description:[
+      'Nothing is as it seems in this world. Many of us have had extraordinary experiences where we\'ve glimpsed this reality -- mystical peeks behind the ordinary, life-threatening moments that alter us forever, or a moment in nature of profound communion. The many revelations in this book take you behind the appearance of things, into the workings of energy and a radical perspective on the way things truly are. Call it enlightenment, greater consciousness or living in grace, it is a potential available to all.',
+      'Martha Novak’s “The Life You Want” delves into the subject of greater consciousness and extraordinary, untapped human potential. This book will dismantle your old, limited beliefs about the nature of who you are, the possibility of real love, and will give you answers from the perspective of how you use your energy to perpetuate the past rather than create a truly different present and future. It will lead you to a new understanding of deeper realities which can actually be seen and understood, realitieswhich are hidden beneath the surface of human relationships and beneath every person\'s struggle to find meaning and happiness.',
+      'The author has a unique capacity for translating complex concepts, offering practical approaches which you can immediately incorporate. She takes the stories of everyday life showing us how we trap our energies as we hold onto the past, secured to the beliefs we conjured as children, remaining energetically hostage to images and ideas that were never even ours to begin with. Only when we bring our energy into the present, do we live our lives passionately, joyously, creatively and far more lovingly according to our true nature. You can purchase Martha\'s book now on amazon.com, kindle.com or at The Phoenix and Dragon Bookstore in Sandy Springs,GA.!'
+    ],
+    links: []
+  },
+}
