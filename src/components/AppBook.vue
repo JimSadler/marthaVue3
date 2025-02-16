@@ -3,34 +3,22 @@ import { ref, computed } from 'vue';
 import {TeacupQuotes} from '@/services/teacupProph.js';
 const props = defineProps({
   book: Object,
-  teacup: Boolean
+  teacup: Boolean,
+  bloodMountain: Boolean
 });
-const randomquote = ref('')
-const randomQuote = computed(() => {
-  const rand = Math.floor(Math.random() * TeacupQuotes.length);
-  console.log('rand',rand)
-  // return this.teacupDataList[rand] ? this.teacupDataList[rand].quote : "";
-  return rand?.quote
-})
+const randomQuote = ref('')
+
  function getRandomQuote() {
   let quoteId = Math.floor(Math.random() * TeacupQuotes.length);
-   randomquote.value = TeacupQuotes[quoteId]?.quote
-   return randomquote.value
+   randomQuote.value = TeacupQuotes[quoteId]?.quote
+   return randomQuote.value
  }
-function getTeacupData() {
-  axios.get("/teacupProph.json").then((response) => {
-    this.teacupDataList = response.data;
-    console.log('teacupDataList', teacupDataList)
-  });
-  // onMounted(() => {
-  //   getRandomQuote()
-  // })
-}
 </script>
 <template>
 	<div class="py-3 my-5 mx-15 px-15">
+    <v-divider class="mb-5" v-if="!bloodMountain"></v-divider>
     <h2 class="text-center font-weight-light mb-3 text-h4 justify-end animate__animated animate__fadeInDown">{{book.title}}</h2>
-    <v-divider></v-divider>
+
     <v-container>
       <v-row>
         <v-col align="center">

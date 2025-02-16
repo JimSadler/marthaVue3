@@ -22,11 +22,11 @@ import {books} from '@/services/constants.js'
 
   </section>
   <div class="books-container">
-    <app-book :book="books.blood_mountain"/>
+    <app-book :book="books.blood_mountain" blood-mountain/>
     <app-book :book="books.the_life_you_want"/>
     <app-book :book="books.teacup_prophecies" teacup/>
   </div>
-  <div class="recent-articles">
+  <div class="recent-articles border-t-sm py-5">
     <app-recent-articles layout="landscape"/>
   </div></template>
 

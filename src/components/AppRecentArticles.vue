@@ -7,6 +7,7 @@ const props = defineProps({
 </script>
 <template>
   <div>
+
     <h2 class="font-weight-regular" :class="layout === 'landscape' ? 'text-center':'' ">Recent Articles</h2>
     <div :class="layout === 'landscape' ? 'd-flex justify-center flex-grow-0':'' ">
       <v-card class="my-5" :class="layout === 'landscape' ? 'd-inline mx-3':'mr-15' " elevation="2" v-for="(article, index) in recentArticles" :key="index">

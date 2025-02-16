@@ -46,8 +46,8 @@ const drawer = ref(null)
       <nav aria-label="Main">
         <v-list class="d-flex px-5" style="list-style-type: none;">
           <v-list-item class="mx-2">
-            <v-btn @click="dynamicToRoute('home')">
-              <v-icon>mdi-home</v-icon>
+            <v-btn @click="dynamicToRoute('home')" color="grey-darken-4">
+              <v-icon color="grey-darken-4">mdi-home</v-icon>
               Home
             </v-btn>
 
@@ -56,7 +56,7 @@ const drawer = ref(null)
             <v-menu>
               <template v-slot:activator="{ props }">
                 <v-btn
-                  color="primary"
+                  color="grey-darken-4"
                   v-bind="props"
                   append-icon="mdi-chevron-down"
                 >
@@ -65,12 +65,12 @@ const drawer = ref(null)
               </template>
               <v-list>
                 <v-list-item>
-                  <v-btn @click="dynamicToRoute('people')">
+                  <v-btn @click="dynamicToRoute('people')" color="grey-darken-4">
                     <v-list-item-title>Our People</v-list-item-title>
                   </v-btn>
                 </v-list-item>
                 <v-list-item>
-                  <v-btn @click=" dynamicToRoute('what-we-do')">
+                  <v-btn @click=" dynamicToRoute('what-we-do')" color="grey-darken-4">
                     <v-list-item-title>What We Do</v-list-item-title>
                   </v-btn>
                 </v-list-item>
@@ -78,17 +78,17 @@ const drawer = ref(null)
             </v-menu>
           </v-list-item>
           <v-list-item>
-            <v-btn @click="dynamicToRoute('books')">
+            <v-btn @click="dynamicToRoute('books')" color="grey-darken-4">
               <v-list-item-title>Books</v-list-item-title>
             </v-btn>
           </v-list-item>
           <v-list-item>
-            <v-btn @click="dynamicToRoute('store')">
+            <v-btn @click="dynamicToRoute('store')" color="grey-darken-4">
               <v-list-item-title>Store</v-list-item-title>
             </v-btn>
           </v-list-item>
           <v-list-item>
-            <v-btn @click="dynamicToRoute('contact')">
+            <v-btn @click="dynamicToRoute('contact')" color="grey-darken-4">
               <v-list-item-title>Contact</v-list-item-title>
             </v-btn>
           </v-list-item>
