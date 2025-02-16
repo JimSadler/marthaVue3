@@ -24,7 +24,7 @@ import {books} from '@/services/constants.js'
   <div class="books-container">
     <app-book :book="books.blood_mountain"/>
     <app-book :book="books.the_life_you_want"/>
-    <app-book :book="books.teacup_prophecies"/>
+    <app-book :book="books.teacup_prophecies" teacup/>
   </div>
   <div class="recent-articles">
     <app-recent-articles layout="landscape"/>
