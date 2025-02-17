@@ -30,52 +30,68 @@ const email = ref('');
       <div class="two-to-one-grid px-15">
       <div>
         <h2 class="text-center mb-5 font-weight-light text-h4 text-grey-darken-3">Contact Us</h2>
-        <v-form v-model="valid"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          name="contact"
-          action="thankYou"
-        >
-          <!-- eslint-disable -->
-          <!-- Name -->
-          <v-text-field
-            prepend-icon="mdi-account"
-            v-model="firstname"
-            :counter="10"
-            :rules="nameRules"
-            label="First name"
-            required
-          />
-          <v-text-field
-            prepend-icon="mdi-account"
-            v-model="lastname"
-            :counter="10"
-            :rules="nameRules"
-            label="Last name"
-            required
-          />
-          <v-text-field
-          prepend-icon="mdi-email"
-          v-model="email"
-          label="Email"
-          required
-          :rules="emailRules"
-          />
+        <div class="contact-grid ml-5 mr-3 mt-3">
+          <v-card>
+            <v-card-title class="text-h4 font-weight-regular">Hello!</v-card-title>
+            <v-card-subtitle class="text-h6">How can we help?</v-card-subtitle>
+            <v-card-text>
+              <v-img class="rounded-lg" width="80%" src="@/assets/people/martha0.jpg"></v-img>
+            </v-card-text>
+          </v-card>
+          <v-card  elevation="2" class="pa-5">
+            <v-form v-model="valid"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    name="contact"
+                    action="thankYou"
+                    class="py-3 px-3"
+            >
+              <!-- eslint-disable -->
+              <!-- Name -->
+              <v-text-field
+                prepend-inner-icon="mdi-account"
+                v-model="firstname"
+                :counter="10"
+                :rules="nameRules"
+                label="First name"
+                required
+                variant="filled"
+              />
+              <v-text-field
+                prepend-inner-icon="mdi-account"
+                v-model="lastname"
+                :counter="10"
+                :rules="nameRules"
+                label="Last name"
+                required
+                variant="filled"
+              />
+              <v-text-field
+                prepend-inner-icon="mdi-email"
+                v-model="email"
+                label="Email"
+                required
+                variant="filled"
+                :rules="emailRules"
+              />
 
-          <v-textarea
-          prepend-icon="mdi-message"
-          v-model="message"
-          label="Message"
-          required
-          />
-          <div class="text-end">
-            <v-btn size="large" density="comfortable" color="green-lighten-1">Contact Us</v-btn>
-          </div>
+              <v-textarea
+                prepend-inner-icon="mdi-message"
+                v-model="message"
+                label="Message"
+                required
+                variant="filled"
+              />
+              <div class="text-end">
+                <v-btn size="large" density="comfortable" color="green-lighten-1">Contact Us</v-btn>
+              </div>
 
-        </v-form>
+            </v-form>
+          </v-card>
+        </div>
       </div>
-      <div>
+      <div class="border-s-sm pl-10">
         <app-recent-articles />
       </div>
     </div>
@@ -84,5 +100,9 @@ const email = ref('');
 </template>
 
 <style lang="scss" scoped>
-
+   .contact-grid {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 1rem;
+  }
 </style>
