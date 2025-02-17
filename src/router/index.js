@@ -45,6 +45,13 @@ const routes = [
       title: 'Contact',
     },
   },
+  { path: '/testimonials',
+    name: 'testimonials',
+    component: () => import('../views/TestimonialsView.vue'),
+    meta: {
+      title: 'Testimonials',
+    },
+  },
 ]
 
 const router = createRouter({

@@ -1,5 +1,5 @@
 <script setup>
-import {storeVideoData} from '@/services/store.constants.js';
+import {storeVideoData, storeAudioData} from '@/services/store.constants.js';
 
 function extraBottomMargin (item) {
   if (item.id === 'intimacy' || item.id === 'true-freedom') {
@@ -83,57 +83,56 @@ function extraBottomMargin (item) {
       </div>
       <div class="mt-3 border-b-sm">
         <h2 class="text-center font-weight-light">Audio Downloads</h2>
-        <v-card
-          :disabled="loading"
-          :loading="loading"
-          class="mx-auto my-12"
-          max-width="374"
-        >
-          <template v-slot:loader="{ isActive }">
-            <v-progress-linear
-              :active="isActive"
-              color="deep-purple"
-              height="4"
-              indeterminate
-            ></v-progress-linear>
-          </template>
+        <div class="d-flex justify-center">
+          <v-card
+            v-for="(audio, index) in storeAudioData"
+            :disabled="loading"
+            :loading="loading"
+            class="my-12 mx-3"
+            width="300"
+          >
+            <template v-slot:loader="{ isActive }">
+              <v-progress-linear
+                :active="isActive"
+                color="deep-purple"
+                height="4"
+                indeterminate
+              ></v-progress-linear>
+            </template>
 
-          <div class="zoom-img">
             <v-img
               height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+              :src="audio.image"
               cover
             ></v-img>
-          </div>
 
-          <v-card-item>
-            <v-card-title>Cafe Badilico</v-card-title>
+            <v-card-item>
+              <v-card-title class="d-flex justify-space-between" >
+                {{ audio.title }}
+                <span class="text-teal">${{audio.price}}</span>
+              </v-card-title>
+              <v-tooltip width="15%" location="top" :text="audio.description" :aria-label="audio.description">
+                <template v-slot:activator="{ props }">
+                  <v-card-text v-bind="props" class="text-overflow-ellipsis px-1 py-0" >
+                    <span class="">{{ audio.description }}</span>
+                  </v-card-text>
+                </template>
+              </v-tooltip>
 
-            <v-card-subtitle>
-              <span class="me-1">Local Favorite</span>
+            </v-card-item>
+            <v-card-actions>
+              <v-btn
+                :class="audio.id === 'intimacy'"
+                color="deep-purple-lighten-2"
+                text="Purchase"
+                block
+                border
+                @click="reserve"
+              ></v-btn>
+            </v-card-actions>
+          </v-card>
+        </div>
 
-            </v-card-subtitle>
-          </v-card-item>
-
-          <v-card-text>
-            <v-row
-              align="center"
-              class="mx-0"
-            >
-            </v-row>
-
-
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              color="deep-purple-lighten-2"
-              text="Reserve"
-              block
-              border
-              @click="reserve"
-            ></v-btn>
-          </v-card-actions>
-        </v-card>
       </div>
 
     </div>

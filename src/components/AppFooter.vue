@@ -13,7 +13,7 @@
               <a href="/contact">Contact</a>
             </li>
             <li class="footlink d-inline-block mx-2">
-              <a href="/testimonial">Testimonials</a>
+              <a href="/testimonials">Testimonials</a>
             </li>
           </ul>
         </v-col>

@@ -36,5 +36,36 @@ export const storeVideoData = [
   },
 ]
   export const storeAudioData = [
-  {id:'', title: 'Store', description: 'Welcome to the store!', price: 0.00, image: 'https://via.placeholder.com/150',},
+  {
+    id:'joy-of-fear-and-worry',
+    title: 'Joy of Fear and Worry',
+    description: 'Exploring the purposes of fear and worry in our daily lives, we see that these things are part of the Dynamic Whole and essential to our growth and well-being. This recording exposes fear and worry for what they are and takes the sting out of them, giving you a new perspective on old conditions that will move out of your life as Consciousness awakens.',
+    price: 2.99,
+        image: new URL(`@/assets/store/dog-2723082_1920.jpg`, import.meta.url).href,
+
+  },
+    {
+      id:'relationships',
+      title: 'Relationships 101',
+      description: 'Great relationships are works of art and perfectly achievable. This recording explores in detail how to create a successful relationship in Consciousness. Whether you are in a relationship currently or wanting to create one, this recording is chock full of powerful insights and strategies for Love.',
+      price: 2.99,
+          image: new URL(`@/assets/store/piano-571968_1920.jpg`, import.meta.url).href,
+
+    },
+    {
+      id:'betraying-the-child',
+      title: 'Betraying the Child Again, and Again',
+      description: 'Each of you carries a virtual child within you to help you heal from the old wounds of the past. Enlisting the inner child in your healing is a powerful tool in order for you become a Full and Vibrant Being in the Now. In this recording, learn all about how to use the inner child - for more insights, to map your progress of healing and to become One with yourself - which is the first step to becoming One with all of Life.',
+      price: 2.99,
+          image: new URL(`@/assets/store/child-817373_1920.jpg`, import.meta.url).href,
+
+    },
+    {
+      id:'prayers-for-real-life',
+      title: 'Prayers for Real Life',
+      description: 'Human Beings are all looking for a leg up, aren\'t we? And yet we are not using the resources we\'ve all heard about and that can do wonders: Prayer. This recording is a collection of prayers for different moments during your day.',
+      price: 2.99,
+          image: new URL(`@/assets/store/feather-4805619_1920.jpg`, import.meta.url).href,
+
+    },
 ]
