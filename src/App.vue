@@ -26,7 +26,7 @@ import AppFooter from "@/components/AppFooter.vue";
   transition: opacity 0.3s ease-in-out;
 }
 .hero {
-  height: 40vh;
+  height: 50vh;
   margin-top: 65px;
   background-size: cover !important;
   background-position: center;

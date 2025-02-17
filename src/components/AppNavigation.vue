@@ -11,7 +11,7 @@ const drawer = ref(null)
 </script>
 <template>
   <div>
-    <div class="ml-3 px-1 position-fixed" style="z-index:1005 !important">
+    <div class="ml-3 px-1 position-fixed animate__animated animate__backInDown" style="z-index:1005 !important">
       <a
         class="nav-bar-nci-logo"
         ref="img"
@@ -29,19 +29,6 @@ const drawer = ref(null)
       order="0"
       class="app-nav-bar"
     >
-      <!--<div class="ml-3 px-1 position-absolute" style="z-index:1005 !important">-->
-      <!--  <a-->
-      <!--    class="nav-bar-nci-logo"-->
-      <!--    ref="img"-->
-      <!--    tabindex="0"-->
-      <!--    href="/"-->
-      <!--    target="_blank"-->
-      <!--    aria-label="Martha Novak Website"-->
-      <!--  >-->
-      <!--    <img alt="Martha Novak Website" class='ml-5 mr-5 mt-1 d-inline-block' style="width: 26.9%; z-index:1;" src="@/assets/m-logo-circle-fill-about-png-final.png"/>-->
-      <!--  </a>-->
-      <!--</div>-->
-
       <v-spacer></v-spacer>
       <nav aria-label="Main">
         <v-list class="d-flex px-5" style="list-style-type: none;">

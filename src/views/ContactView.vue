@@ -30,15 +30,15 @@ const email = ref('');
       <div class="two-to-one-grid px-15">
       <div>
         <h2 class="text-center mb-5 font-weight-light text-h4 text-grey-darken-3">Contact Us</h2>
-        <div class="contact-grid ml-5 mr-3 mt-3">
-          <v-card>
+        <div class="contact-grid ml-5 mr-3 mt-3 ">
+          <v-card class="animate__animated animate__fadeInUp">
             <v-card-title class="text-h4 font-weight-regular">Hello!</v-card-title>
             <v-card-subtitle class="text-h6">How can we help?</v-card-subtitle>
             <v-card-text>
               <v-img class="rounded-lg" width="80%" src="@/assets/people/martha0.jpg"></v-img>
             </v-card-text>
           </v-card>
-          <v-card  elevation="2" class="pa-5">
+          <v-card  elevation="2" class="pa-5 animate__animated animate__slideInRight">
             <v-form v-model="valid"
                     method="post"
                     data-netlify="true"
