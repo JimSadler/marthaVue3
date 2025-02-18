@@ -1,7 +1,7 @@
 export const recentArticles = [
       {
         title: "The Choices We Make Naked",
-        image: new URL(`@/assets/articles/actress-2868705_1920.jpg`, import.meta.url).href,
+        image: new URL(`@/assets/articles/home-hero0.jpg`, import.meta.url).href,
         url: "",
         params: {
           author: "Martha Novak",

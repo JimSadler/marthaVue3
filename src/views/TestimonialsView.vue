@@ -1,6 +1,12 @@
 <script setup>
  import {testimonials} from '@/services/constants.js'
  import AppRecentArticles from "@/components/AppRecentArticles.vue";
+
+ function notLast (index) {
+
+ return   index !== testimonials.length - 1
+
+ }
 </script>
 <template>
 	<div>
@@ -28,10 +34,10 @@
             <v-card-text>
               <p class="my-3 font-weight-light">{{testimonial.text}}</p>
             </v-card-text>
-            <v-divider></v-divider>
+            <v-divider v-if="notLast(t)"></v-divider>
           </v-card>
         </div>
-        <div>
+        <div class="border-s-sm pl-10">
           <app-recent-articles />
         </div>
       </div>

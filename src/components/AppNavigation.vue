@@ -70,6 +70,11 @@ const drawer = ref(null)
             </v-btn>
           </v-list-item>
           <v-list-item>
+            <v-btn @click="dynamicToRoute('articles')" color="grey-darken-4">
+              <v-list-item-title>Articles</v-list-item-title>
+            </v-btn>
+          </v-list-item>
+          <v-list-item>
             <v-btn @click="dynamicToRoute('store')" color="grey-darken-4">
               <v-list-item-title>Store</v-list-item-title>
             </v-btn>

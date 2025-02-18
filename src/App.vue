@@ -36,6 +36,9 @@ import AppFooter from "@/components/AppFooter.vue";
   &.is-medium {
     height: 40vh;
   }
+  &.is-large {
+    height: 60vh;
+  }
   &.hero:after {
     content: '';
     top: 0;
