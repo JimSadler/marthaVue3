@@ -39,8 +39,34 @@ const articleData = computed(() => {
   </section>
   <div class="my-5 mx-3">
     <v-container class="container">
-      <v-row class="content">
-        <v-col v-html="articleData.text" class="text-body-1"></v-col>
+      <v-row  v-if="articleData.id !== 'how-we-came-to-be-what-we-are'" class="content" v-for="(text,j) in articleData.text" :key="j">
+        <v-col class="text-body-1">
+            <p class="text-body-1">{{ text }}</p>
+        </v-col>
+      </v-row>
+      <v-row v-else>
+        <v-col>
+          <p  class="text-body-1 my-3" v-for="(text,k) in articleData.text" :key="k">{{ text }}</p>
+          <p>subset 1:</p>
+          <v-list>
+            <v-list-item v-for="(item,l) in articleData.subset1" :key="l">
+              <p>{{item}}</p>
+            </v-list-item>
+          </v-list>
+          <p>subset 2:</p>
+          <v-list>
+            <v-list-item v-for="(item,l) in articleData.subset2" :key="m">
+              <p>{{item}}</p>
+            </v-list-item>
+          </v-list>
+          <p>subset 3:</p>
+          <v-list>
+            <v-list-item v-for="(item,l) in articleData.subset3" :key="n">
+              <p>{{item}}</p>
+            </v-list-item>
+          </v-list>
+          <p  class="text-body-1 my-3" v-for="(text,o) in articleData.text2" :key="0">{{ text }}</p>
+        </v-col>
       </v-row>
     </v-container>
   </div>
