@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import {TeacupQuotes} from '@/services/teacupProph.js';
 const props = defineProps({
   book: Object,
@@ -9,10 +9,14 @@ const props = defineProps({
 const randomQuote = ref('')
 
  function getRandomQuote() {
+  console.log('getRandomQuote', TeacupQuotes)
   let quoteId = Math.floor(Math.random() * TeacupQuotes.length);
    randomQuote.value = TeacupQuotes[quoteId]?.quote
    return randomQuote.value
  }
+ onMounted(() => {
+   randomQuote.value = getRandomQuote()
+ })
 </script>
 <template>
 	<div class="py-3 my-5 mx-15 px-15">
@@ -29,28 +33,36 @@ const randomQuote = ref('')
             {{text}}
           </p>
           <div v-if="teacup">
-            <div v-if="randomquote" class="mt-5">
+            <div v-if="randomQuote" class="mt-5">
               <div class="d-flex">
                 <v-divider></v-divider>
                 <v-icon class="mt-n3" size="large">mdi-format-quote-close</v-icon>
                 <v-divider></v-divider>
               </div>
               <p class="font-weight-light font-italic text-h6 text-center pb-3 animate__animated animate__zoomIn"
-                 v-if="randomquote">
-                {{ randomquote }}
+                 v-if="randomQuote">
+                {{ randomQuote }}
               </p>
               <p class="font-weight-light text-body-1 text-center">~ Martha Novak ~</p>
               <v-divider></v-divider>
             </div>
             <div class="text-center">
               <v-btn
-                class="mt-5 text-black mx-auto"
+                class="mt-5 text-black mr-3"
                 color="#8db0b3"
                 @click="getRandomQuote"
                 prepend-icon="mdi-tea"
-                size="large"
               >
-                get quote
+                get new quote
+              </v-btn>
+              <v-btn
+
+                 class="mt-5 text-black mx-auto"
+                 color="#8db0b3"
+                 prepend-icon="mdi-share"
+                @click=""
+              >
+                Share quote
               </v-btn>
             </div>
           </div>

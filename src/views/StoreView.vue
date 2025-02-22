@@ -56,7 +56,10 @@ function extraBottomMargin (item) {
 
             <v-card-item>
               <v-card-title class="d-flex justify-space-between" >
-                {{ video.title }}
+                 <span :data-fsc-item-path="video.store_path" data-fsc-item-display="data-fsc-item-display">
+
+                </span>
+                <!--{{ video.title }}-->
                 <span class="text-teal">${{video.price}}</span>
               </v-card-title>
               <v-tooltip width="15%" location="top" :text="video.description" :aria-label="video.description">
@@ -75,6 +78,9 @@ function extraBottomMargin (item) {
                 text="Purchase"
                 block
                 border
+                :data-fsc-item-path="video.store_path"
+                :data-fsc-item-path-value="video.store_path"
+                data-fsc-action="Add, Checkout"
                 @click="reserve"
               ></v-btn>
             </v-card-actions>
@@ -108,8 +114,12 @@ function extraBottomMargin (item) {
 
             <v-card-item>
               <v-card-title class="d-flex justify-space-between" >
-                {{ audio.title }}
-                <span class="text-teal">${{audio.price}}</span>
+                <span :data-fsc-item-path="audio.store_path" data-fsc-item-display="data-fsc-item-display">
+
+                </span>
+                <!--{{ audio.title }}-->
+
+                <span class="text-teal" data-fsc-item-price="data-fsc-item-price">${{audio.price}}</span>
               </v-card-title>
               <v-tooltip width="15%" location="top" :text="audio.description" :aria-label="audio.description">
                 <template v-slot:activator="{ props }">
@@ -127,6 +137,9 @@ function extraBottomMargin (item) {
                 text="Purchase"
                 block
                 border
+                :data-fsc-item-path="audio.store_path"
+                :data-fsc-item-path-value="audio.store_path"
+                data-fsc-action="Add, Checkout"
                 @click="reserve"
               ></v-btn>
             </v-card-actions>
