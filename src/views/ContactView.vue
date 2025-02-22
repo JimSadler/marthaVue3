@@ -41,8 +41,7 @@ const email = ref('');
           <v-card  elevation="2" class="pa-5 animate__animated animate__slideInRight">
             <v-form v-model="valid"
                     method="post"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    netlify
                     name="contact"
                     action="thankYou"
                     class="py-3 px-3"
@@ -84,7 +83,7 @@ const email = ref('');
                 variant="filled"
               />
               <div class="text-end">
-                <v-btn size="large" density="comfortable" color="green-lighten-1">Contact Us</v-btn>
+                <v-btn type="submit" size="large" density="comfortable" color="green-lighten-1">Contact Us</v-btn>
               </div>
 
             </v-form>
