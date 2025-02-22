@@ -59,7 +59,7 @@ function extraBottomMargin (item) {
                  <span :data-fsc-item-path="video.store_path" data-fsc-item-display="data-fsc-item-display">
 
                 </span>
-                <!--{{ video.title }}-->
+                {{ video.title }}
                 <span class="text-teal">${{video.price}}</span>
               </v-card-title>
               <v-tooltip width="15%" location="top" :text="video.description" :aria-label="video.description">
@@ -117,7 +117,7 @@ function extraBottomMargin (item) {
                 <span :data-fsc-item-path="audio.store_path" data-fsc-item-display="data-fsc-item-display">
 
                 </span>
-                <!--{{ audio.title }}-->
+                {{ audio.title }}
 
                 <span class="text-teal" data-fsc-item-price="data-fsc-item-price">${{audio.price}}</span>
               </v-card-title>

@@ -17,13 +17,13 @@
             <!-- <button class="button">Learn More</button> -->
             <br />
 
-            <v-btn
-              density="comfortable"
-              size="x-large"
-              class="button btn is-medium animated-button victoria-three animated flipInX px-15"
-              href="/radio"
-            >Explore Here</v-btn
-            >
+            <!--<v-btn-->
+            <!--  density="comfortable"-->
+            <!--  size="x-large"-->
+            <!--  class="button btn is-medium animated-button victoria-three animated flipInX px-15"-->
+            <!--  href="/radio"-->
+            <!--&gt;Explore Here</v-btn-->
+            <!--&gt;-->
           </h2>
         </div>
       </v-carousel-item>
@@ -44,7 +44,7 @@
             <v-btn
               size="x-large"
               class="button btn is-medium animated-button victoria-three animated flipInX px-15"
-              href="/about"
+              href="/our-people"
             >Connect Here</v-btn
             >
           </h2>
@@ -63,12 +63,12 @@
             downloads available.
             <!-- <button class="button">Learn More</button> -->
             <br />
-            <v-btn
-              size="x-large"
-              class="button btn is-medium animated-button victoria-three animated flipInX px-15"
-              href="/classes"
-            >Learn More</v-btn
-            >
+            <!--<v-btn-->
+            <!--  size="x-large"-->
+            <!--  class="button btn is-medium animated-button victoria-three animated flipInX px-15"-->
+            <!--  href="/classes"-->
+            <!--&gt;Learn More</v-btn-->
+            <!--&gt;-->
           </h2>
           <div class="transboxButton"></div>
         </div>
