@@ -12,7 +12,6 @@ const email = ref('');
       :class="`hero is-medium`"
     >
       <img
-
         alt
         class="hero-bg-img animate__animated animate__fadeIn animate__fast"
         src="@/assets/contact/wood-3046186_1920.jpg"
@@ -39,11 +38,12 @@ const email = ref('');
             </v-card-text>
           </v-card>
           <v-card  elevation="2" class="pa-5 animate__animated animate__slideInRight">
-            <v-form v-model="valid"
-                    method="post"
-                    netlify
-                    name="contact"
-                    class="py-3 px-3"
+            <v-form
+              v-model="valid"
+              method="POST"
+              netlify
+              name="contact"
+              class="py-3 px-3"
             >
               <!-- eslint-disable -->
               <!-- Name -->
