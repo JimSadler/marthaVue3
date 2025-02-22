@@ -43,7 +43,6 @@ const email = ref('');
                     method="post"
                     netlify
                     name="contact"
-                    action="thankYou"
                     class="py-3 px-3"
             >
               <!-- eslint-disable -->
