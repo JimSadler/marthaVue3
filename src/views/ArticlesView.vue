@@ -23,7 +23,7 @@ import {recentArticles, allArticles} from "@/services/articles.constants.js";
   <v-container>
     <div class="d-flex justify-start flex-wrap">
       <div v-for="(article, index) in allArticles" :key="index">
-        <a :href="`articles/${article.id}`" class="text-decoration-none">
+        <router-link :to="`articles/${article.id}`" class="text-decoration-none">
         <v-card class="my-5 mx-3" elevation="2"
                 style="width: 500px;">
           <v-img
@@ -41,7 +41,7 @@ import {recentArticles, allArticles} from "@/services/articles.constants.js";
               {{ article.params.date }}</p>
           </v-card-text>
         </v-card>
-      </a></div>
+      </router-link></div>
     </div>
   </v-container>
 </template>

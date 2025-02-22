@@ -39,7 +39,6 @@ const email = ref('');
           </v-card>
           <v-card  elevation="2" class="pa-5 animate__animated animate__slideInRight">
             <v-form
-              v-model="valid"
               method="POST"
               netlify
               name="contact"
