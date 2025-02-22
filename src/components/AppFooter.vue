@@ -10,10 +10,10 @@
           </h2>
           <ul style="list-style: none">
             <li class="footlink d-inline-block mr-2">
-              <a href="/contact">Contact</a>
+              <v-btn exact variant="text" size="small" density="compact"  to="/contact">Contact</v-btn>
             </li>
             <li class="footlink d-inline-block mx-2">
-              <a href="/testimonials">Testimonials</a>
+              <v-btn exact variant="text" size="small" density="compact" to="/testimonials">Testimonials</v-btn>
             </li>
           </ul>
         </v-col>

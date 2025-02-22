@@ -83,11 +83,11 @@ const drawer = ref(null)
               <v-list-item-title>Store</v-list-item-title>
             </v-btn>
           </v-list-item>
-          <v-list-item>
-            <v-btn to="/contact" exact color="grey-darken-4">
-              <v-list-item-title>Contact</v-list-item-title>
-            </v-btn>
-          </v-list-item>
+          <!--<v-list-item>-->
+          <!--  <v-btn to="/contact" exact color="grey-darken-4">-->
+          <!--    <v-list-item-title>Contact</v-list-item-title>-->
+          <!--  </v-btn>-->
+          <!--</v-list-item>-->
         </v-list>
       </nav>
     </v-app-bar>
