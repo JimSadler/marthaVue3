@@ -72,6 +72,13 @@ const router = createRouter({
   history: createWebHistory(),
   linkExactActiveClass: "active",
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 // update title
 router.beforeEach((to, _, next) => {
