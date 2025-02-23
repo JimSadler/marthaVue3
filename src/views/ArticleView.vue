@@ -20,6 +20,8 @@ const articleData = computed(() => {
       alt
       class="hero-bg-img animate__animated animate__fadeIn animate__fast"
       :src="articleData.image"
+      style="opacity: 0.7 !important;
+"
     />
     <div class="hero-body">
       <div class="container text-center align-center pr-15 mt-10">

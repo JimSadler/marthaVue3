@@ -35,8 +35,10 @@ import AppFooter from "@/components/AppFooter.vue";
   position: relative;
   &.is-medium {
     height: 40vh;
+    background-color: #333C4D;
   }
   &.is-large {
+    background-color: #333C4D;
     height: 60vh;
   }
   &.hero:after {
