@@ -54,7 +54,7 @@ export const allArticles = [
   } ,
   {
     title: "How We Came To Be What We Are",
-    image: new URL(`@/assets/articles/howWeCAmeTo.jpg`, import.meta.url).href,
+    image: new URL(`@/assets/articles/person-1245959_1920.jpg`, import.meta.url).href,
 
     id: "how-we-came-to-be-what-we-are",
     params: {
@@ -153,7 +153,7 @@ export const allArticles = [
   },
   {
     title: "Empowering the Body",
-    image: new URL(`@/assets/articles/person-1245959_1920.jpg`, import.meta.url).href,
+    image: new URL(`@/assets/articles/hawaii-4923130_1920.jpg`, import.meta.url).href,
 
     id: "empowering-the-body",
     params: {

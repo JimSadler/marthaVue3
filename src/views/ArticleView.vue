@@ -1,6 +1,6 @@
 <script setup>
 import {allArticles} from "@/services/articles.constants.js";
-import { ref, watch, computed } from 'vue'
+import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
@@ -28,8 +28,7 @@ const articleData = computed(() => {
         <h1 class="animate__animated animate__fadeInUp text-white mt-5 font-weight-light">
           {{ articleData.title }}
         </h1>
-        <v-divider class="subtitle-divider" color='white' style=" position: relative"></v-divider>
-        <div class="subtitle"  style=" position: relative">
+        <div class="subtitle animate__animated animate__fadeInDown animate__delay-1s"  style=" position: relative">
           <p class="text-white font-weight-light" style=" position: relative">
             <span class="font-weight-medium">Author:</span> {{ articleData.params.author }}
             <span class="font-weight-medium">Published On:</span> {{ articleData.params.date }}
