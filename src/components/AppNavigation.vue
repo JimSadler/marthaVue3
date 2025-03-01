@@ -16,41 +16,41 @@ const drawer = ref(null);
 </script>
 <template>
   <div>
-    <!--<div class="ml-3 px-1 position-fixed animate__animated animate__backInDown"-->
-    <!--     style="z-index:1005 !important">-->
-    <!--  <a-->
-    <!--    ref="img"-->
-    <!--    aria-label="Martha Novak Website"-->
-    <!--    class="nav-bar-nci-logo"-->
-    <!--    href="/"-->
-    <!--    tabindex="0"-->
-    <!--    target="_blank"-->
-    <!--  >-->
-    <!--    <img alt="Martha Novak Website" class='marthalogo ml-5 mr-5 mt-10 d-inline-block'-->
-    <!--         src="@/assets/marthalogo_justM.png"-->
-    <!--         style="width: 35.9%;" />-->
-    <!--  </a>-->
-    <!--</div>-->
+    <div class="ml-3 px-1 position-fixed animate__animated animate__backInDown"
+         style="z-index:1005 !important">
+      <a
+        ref="img"
+        aria-label="Martha Novak Website"
+        class="nav-bar-nci-logo"
+        href="/"
+        tabindex="0"
+        target="_blank"
+      >
+        <img alt="Martha Novak Website" class='marthalogo ml-5 mr-5 mt-1 d-inline-block'
+             src="@/assets/marthaM_color2.png"
+             style="width: 55.9%;" />
+      </a>
+    </div>
     <v-app-bar
       class="app-nav-bar"
       elevation="2"
       order="0"
     >
-      <div class="ml-3 px-1 animate__animated animate__backInDown"
-           style="z-index:1005 !important">
-        <a
-          ref="img"
-          aria-label="Martha Novak Website"
-          class="nav-bar-nci-logo"
-          href="/"
-          tabindex="0"
-          target="_blank"
-        >
-          <img alt="Martha Novak Website" class='marthalogo ml-5 mr-5 mt-1 d-inline-block'
-               src="@/assets/marthaM_color2.png"
-               style="width: 35.9%;" />
-        </a>
-      </div>
+      <!--<div class="ml-3 px-1 animate__animated animate__backInDown"-->
+      <!--     style="z-index:1005 !important">-->
+      <!--  <a-->
+      <!--    ref="img"-->
+      <!--    aria-label="Martha Novak Website"-->
+      <!--    class="nav-bar-nci-logo"-->
+      <!--    href="/"-->
+      <!--    tabindex="0"-->
+      <!--    target="_blank"-->
+      <!--  >-->
+      <!--    <img alt="Martha Novak Website" class='marthalogo ml-5 mr-5 mt-1 d-inline-block'-->
+      <!--         src="@/assets/marthaM_color2.png"-->
+      <!--         style="width: 35.9%;" />-->
+      <!--  </a>-->
+      <!--</div>-->
       <v-spacer></v-spacer>
       <nav aria-label="Main">
         <v-list class="d-flex px-5" style="list-style-type: none;">
