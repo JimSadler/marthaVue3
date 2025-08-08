@@ -1,86 +1,120 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
-	<div class="h-100" >
-    <v-carousel height="100vh" hide-delimiters>
-      <v-carousel-item
-        src="@/assets/homepage/tulip-2189317_1920.jpg"
-        height="100%"
-        cover
+  <div class="h-100 bg-grey-darken-4">
+    <div class="blood-mountain-container bg-black d-flex align-center justify-center mt-15"></div>
+    <div class="position-absolute" style="z-index: 1000 !important; bottom: 32%; right: 5%;">
+      <!--<v-btn-->
+      <!--  aria-label="Buy Blood Mountain on Audible"-->
+      <!--  class="button btn is-medium animated-button victoria-three animated flipInX px-15 mx-1"-->
+      <!--  href="/our-people"-->
+      <!--  size="x-large"-->
+      <!--  target="_blank"-->
+      <!--&gt;-->
+      <!--  <v-img alt class="mt-n9 custom-audible-svg" src="/audible-logo-png_seeklogo-298112.png" width="85" />-->
+      <!--</v-btn>-->
+      <v-btn
+        aria-label="Buy Blood Mountain on Amazon"
+        class="button btn is-medium animated-button victoria-three animated flipInX px-15 mx-1"
+        href="https://www.amazon.com/Blood-Mountain-Martha-Novak/dp/1963986067"
+        size="x-large"
+        target="_blank"
       >
-        <div class="transbox" style="text-align: center;">
-          <h2>
-            Listen to Martha’s Radio Show for powerful information and
-            uplifting insights.
-            <br />Open your awareness.
-            <!-- <button class="button">Learn More</button> -->
-            <br />
+        <v-img alt class="mt-n9 custom-amazon-svg" src="/294695_amazon_icon.svg" width="100" />
+      </v-btn>
+    </div>
+  </div>
+  <!--<div class="h-100" >-->
+  <!--  -->
+  <!--  <v-carousel height="100vh" hide-delimiters>-->
+  <!--    <v-carousel-item-->
+  <!--      src="@/assets/homepage/tulip-2189317_1920.jpg"-->
+  <!--      height="100%"-->
+  <!--      cover-->
+  <!--    >-->
+  <!--      <div class="transbox" style="text-align: center;">-->
+  <!--        <h2>-->
+  <!--          Listen to Martha’s Radio Show for powerful information and-->
+  <!--          uplifting insights.-->
+  <!--          <br />Open your awareness.-->
+  <!--          &lt;!&ndash; <button class="button">Learn More</button> &ndash;&gt;-->
+  <!--          <br />-->
 
-            <!--<v-btn-->
-            <!--  density="comfortable"-->
-            <!--  size="x-large"-->
-            <!--  class="button btn is-medium animated-button victoria-three animated flipInX px-15"-->
-            <!--  href="/radio"-->
-            <!--&gt;Explore Here</v-btn-->
-            <!--&gt;-->
-          </h2>
-        </div>
-      </v-carousel-item>
+  <!--          &lt;!&ndash;<v-btn&ndash;&gt;-->
+  <!--          &lt;!&ndash;  density="comfortable"&ndash;&gt;-->
+  <!--          &lt;!&ndash;  size="x-large"&ndash;&gt;-->
+  <!--          &lt;!&ndash;  class="button btn is-medium animated-button victoria-three animated flipInX px-15"&ndash;&gt;-->
+  <!--          &lt;!&ndash;  href="/radio"&ndash;&gt;-->
+  <!--          &lt;!&ndash;&gt;Explore Here</v-btn&ndash;&gt;-->
+  <!--          &lt;!&ndash;&gt;&ndash;&gt;-->
+  <!--        </h2>-->
+  <!--      </div>-->
+  <!--    </v-carousel-item>-->
 
-      <v-carousel-item
-        src="@/assets/homepage/hummingbird-2139279_1920.jpg"
-        height="100%"
-        cover
-      >
-        <div class="transbox" style="text-align: center;">
-          <h2>
-            Wherever you are on your spiritual journey
-            <br />private sessions are available.
-            <br />
-            <span class="slidersubHead">Discover yourself.</span>
-            <!-- <button class="button">Learn More</button> -->
-            <br />
-            <v-btn
-              size="x-large"
-              class="button btn is-medium animated-button victoria-three animated flipInX px-15"
-              href="/our-people"
-            >Connect Here</v-btn
-            >
-          </h2>
-        </div>
-      </v-carousel-item>
+  <!--    <v-carousel-item-->
+  <!--      src="@/assets/homepage/hummingbird-2139279_1920.jpg"-->
+  <!--      height="100%"-->
+  <!--      cover-->
+  <!--    >-->
+  <!--      <div class="transbox" style="text-align: center;">-->
+  <!--        <h2>-->
+  <!--          Wherever you are on your spiritual journey-->
+  <!--          <br />private sessions are available.-->
+  <!--          <br />-->
+  <!--          <span class="slidersubHead">Discover yourself.</span>-->
+  <!--          &lt;!&ndash; <button class="button">Learn More</button> &ndash;&gt;-->
+  <!--          <br />-->
+  <!--          <v-btn-->
+  <!--            size="x-large"-->
+  <!--            class="button btn is-medium animated-button victoria-three animated flipInX px-15"-->
+  <!--            href="/our-people"-->
+  <!--          >Connect Here</v-btn-->
+  <!--          >-->
+  <!--        </h2>-->
+  <!--      </div>-->
+  <!--    </v-carousel-item>-->
 
-      <v-carousel-item
-        src="@/assets/homepage/milky-way-916523_1920.jpg"
-        height="100%"
-        cover
-      >
-        <div class="transbox" style="text-align: center;">
-          <h2>
-            Unlock your potential
-            <br />through personal growth and change. <br />Courses and media
-            downloads available.
-            <!-- <button class="button">Learn More</button> -->
-            <br />
-            <!--<v-btn-->
-            <!--  size="x-large"-->
-            <!--  class="button btn is-medium animated-button victoria-three animated flipInX px-15"-->
-            <!--  href="/classes"-->
-            <!--&gt;Learn More</v-btn-->
-            <!--&gt;-->
-          </h2>
-          <div class="transboxButton"></div>
-        </div>
-      </v-carousel-item>
-    </v-carousel>
-	</div>
+  <!--    <v-carousel-item-->
+  <!--      src="@/assets/homepage/milky-way-916523_1920.jpg"-->
+  <!--      height="100%"-->
+  <!--      cover-->
+  <!--    >-->
+  <!--      <div class="transbox" style="text-align: center;">-->
+  <!--        <h2>-->
+  <!--          Unlock your potential-->
+  <!--          <br />through personal growth and change. <br />Courses and media-->
+  <!--          downloads available.-->
+  <!--          &lt;!&ndash; <button class="button">Learn More</button> &ndash;&gt;-->
+  <!--          <br />-->
+  <!--          &lt;!&ndash;<v-btn&ndash;&gt;-->
+  <!--          &lt;!&ndash;  size="x-large"&ndash;&gt;-->
+  <!--          &lt;!&ndash;  class="button btn is-medium animated-button victoria-three animated flipInX px-15"&ndash;&gt;-->
+  <!--          &lt;!&ndash;  href="/classes"&ndash;&gt;-->
+  <!--          &lt;!&ndash;&gt;Learn More</v-btn&ndash;&gt;-->
+  <!--          &lt;!&ndash;&gt;&ndash;&gt;-->
+  <!--        </h2>-->
+  <!--        <div class="transboxButton"></div>-->
+  <!--      </div>-->
+  <!--    </v-carousel-item>-->
+  <!--  </v-carousel>-->
+  <!--</div>-->
 </template>
 
 <style lang="scss" scoped>
+.blood-mountain-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('@/assets/homepage/bloodMountainAdd@2x.png');
+  background-size: 100% 90%;
+  padding-bottom: 56.25%;
+  padding-top: 20px;
+}
+
 .v-btn::after {
   border: none;
 }
+
 div.transbox {
   margin-left: 35%;
   margin-top: 30%;
@@ -96,12 +130,14 @@ div.transbox p {
   font-weight: bold;
   color: whitesmoke;
 }
+
 div.transbox h2 {
   margin: 22% 10% 2% 30%;
   font-size: 35px;
   font-weight: 250;
   color: whitesmoke;
 }
+
 .transbox .button {
   font-weight: 500;
 }
@@ -128,7 +164,14 @@ button.animated-button:visited {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+
+  .custom-amazon-svg,
+  .custom-audible-svg {
+    transition: all 1s ease;
+    filter: invert(1);
+  }
 }
+
 a.animated-button:after,
 a.animated-button:visited:after,
 button.animated-button:after,
@@ -145,6 +188,7 @@ button.animated-button:visited:after {
   -o-transition: all 0.75s ease 0s;
   transition: all 0.75s ease 0s;
 }
+
 a.animated-button:hover,
 a.animated-button:visited:hover,
 button.animated-button:visited:hover,
@@ -152,9 +196,15 @@ button.animated-button:hover {
   color: #fff;
   text-shadow: none;
   background-color: #0e7283;
-  border: 1px solid;
+  border: 0.5px solid;
   border-color: #fff !important;
+
+  .custom-amazon-svg,
+  .custom-audible-svg {
+    filter: invert(0);
+  }
 }
+
 a.animated-button:hover:after,
 a.animated-button:visited:hover:after,
 button.animated-button:hover:after,
@@ -163,13 +213,14 @@ button.animated-button:visited:hover:after {
 }
 
 /* Sandy Buttons */
- a.animated-button.victoria-three,
- button.animated-button.victoria-three {
-  border: 2px solid whitesmoke;
+a.animated-button.victoria-three,
+button.animated-button.victoria-three {
+  border: 0.5px solid whitesmoke;
   width: 17.5em;
   background-color: transparent;
   color: whitesmoke;
 }
+
 a.animated-button.victoria-three:after,
 button.animated-button.victoria-three:after {
   background: #0e7283;
@@ -179,6 +230,7 @@ button.animated-button.victoria-three:after {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
+
 a.animated-button.victoria-three:hover:after,
 button.animated-button.victoria-three:hover:after {
   height: 100%;
