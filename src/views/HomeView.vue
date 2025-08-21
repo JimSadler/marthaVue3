@@ -6,7 +6,7 @@
       <v-btn
         aria-label="Buy Blood Mountain on Audible"
         class="button btn is-medium animated-button victoria-three animated flipInX px-15 mx-1"
-        href="https://www.audible.com/pd/Blood-Mountain-Audiobook/B0FMYQXW3N?qid=1755784326&sr=1-1&ref_pageloadid=not_applicable&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=E5ZBDAKT998RR0S712A0&plink=LvJqIYLqL5grVybd&pageLoadId=wXzsE779KzbPdRp1&creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c&ref=a_search_c3_lProduct_1_1"
+        href="https://www.audible.com/pd/Blood-Mountain-Audiobook/B0FMYQXW3N?source_code=ASSGB149080119000H&share_location=pdp"
         size="x-large"
         target="_blank"
       >
