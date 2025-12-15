@@ -95,7 +95,7 @@ onMounted(() => {
             {{ text }}
           </p>
           <div v-if="bloodMountain" class="btn-container text-center mt-15">
-            <div class="position-absolute mt-10" style="z-index: 1000 !important; bottom: 32%; right: 5%;">
+            <div class="position-absolute mt-10" style="z-index: 1000 !important; bottom: 26%; right: 5%;">
               <v-btn
                 aria-label="Buy Blood Mountain on Audible"
                 class="button btn is-medium animated-button victoria-three animated flipInX px-15 mx-1"
@@ -207,7 +207,7 @@ onMounted(() => {
   width: 100%;
   overflow: hidden;
   padding-bottom: 6.25%;
-  padding-top: 2px;
+  padding-top: 0px;
 }
 /* Animated Buttons */
 a.animated-button,
@@ -284,7 +284,7 @@ button.animated-button:visited:hover:after {
 /* Sandy Buttons */
 a.animated-button.victoria-three,
 button.animated-button.victoria-three {
-  //border: 0.5px solid whitesmoke;
+  border: 1.3px solid #0e7283 !important;
   width: 17.5em;
   background-color: transparent;
   color: whitesmoke;
