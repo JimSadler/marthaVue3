@@ -15,7 +15,7 @@
       <v-btn
         aria-label="Buy Blood Mountain on Amazon"
         class="button btn is-medium animated-button victoria-three animated flipInX px-15 mx-1"
-        href="https://www.amazon.com/Blood-Mountain-Martha-Novak/dp/1963986067"
+        href="https://www.amazon.com/BLOOD-MOUNTAIN-Martha-Novak/dp/B0G3X7MV1Z/ref=tmm_pap_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.GXQgo3w6O_2o1wtjkGJCHhFgY3hMxVUE_CGwFJQD3Zr1dFQyp2k0CyCAO0Dt2LzmH16QoHKoHwOjmUgITQ98ZlmKrj5A3SyRuOWQQj9UCJlSxdIyowRsabWlTXYLqNBPkAEnwhk2KLAk-BDVQGLO3iINActpmFOwzf9i-JxdT4ZMyZ2eEFdi9zWf5yORuccQ9IckUla3DXLbZlfFQ36h7XLRQkuPoMKnuksmOyN9_zY.1DMfdAiqLImI5N3PxAKzJchc-lxAXlzvE4pa22g0MQY&qid=1765729320&sr=1-1"
         size="x-large"
         target="_blank"
       >
