@@ -51,7 +51,7 @@ const handleSubmit = async () => {
 
   try {
     // This sends the data to Netlify in the background
-    await fetch('/', {
+    await fetch('/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body,
