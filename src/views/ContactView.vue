@@ -38,17 +38,23 @@ const messageRules = [
     return 'Please enter a message.';
   },
 ];
-const handleSubmit = async e => {
+const handleSubmit = async () => {
   // If you're using Vuetify's validation, you'd check 'valid' here
 
-  const formData = new FormData(e.target);
+  const body = new URLSearchParams({
+    'form-name': 'contact',
+    firstname: firstname.value,
+    lastname: lastname.value,
+    email: email.value,
+    message: message.value,
+  }).toString();
 
   try {
     // This sends the data to Netlify in the background
     await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: body,
     });
 
     // Once sent, navigate to your Thank You page
@@ -112,6 +118,7 @@ const handleSubmit = async e => {
                   :counter="10"
                   :rules="nameRules"
                   label="First name"
+                  name="firstname"
                   prepend-inner-icon="mdi-account"
                   required
                   variant="filled"
@@ -121,6 +128,7 @@ const handleSubmit = async e => {
                   :counter="10"
                   :rules="nameRules"
                   label="Last name"
+                  name="lastname"
                   prepend-inner-icon="mdi-account"
                   required
                   variant="filled"
@@ -129,6 +137,7 @@ const handleSubmit = async e => {
                   v-model="email"
                   :rules="emailRules"
                   label="Email"
+                  name="email"
                   prepend-inner-icon="mdi-email"
                   required
                   variant="filled"
@@ -138,6 +147,7 @@ const handleSubmit = async e => {
                   v-model="message"
                   :rules="messageRules"
                   label="Message"
+                  name="message"
                   prepend-inner-icon="mdi-message"
                   required
                   variant="filled"
