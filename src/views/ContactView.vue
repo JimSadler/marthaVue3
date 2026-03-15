@@ -1,16 +1,73 @@
 <script setup>
-import { ref } from "vue";
-import AppRecentArticles from "@/components/AppRecentArticles.vue";
+import { ref } from 'vue';
+import AppRecentArticles from '@/components/AppRecentArticles.vue';
+import { useRouter } from 'vue-router'; // 1. Import the router
+const router = useRouter(); // 2. Initialize router
+
 const valid = ref(false);
 const firstname = ref('');
 const lastname = ref('');
 const email = ref('');
+const message = ref('');
+
+const nameRules = [
+  value => {
+    if (value?.length > 0) return true;
+    return 'Name is required.';
+  },
+  value => {
+    if (value?.length <= 10) return true;
+    return 'Name must be less than 10 characters.';
+  },
+];
+
+const emailRules = [
+  value => {
+    if (value?.length > 0) return true;
+    return 'E-mail is required.';
+  },
+  value => {
+    if (/.+@.+\..+/.test(value)) return true;
+    return 'E-mail must be valid.';
+  },
+];
+
+const messageRules = [
+  value => {
+    if (value?.length > 0) return true;
+    return 'Please enter a message.';
+  },
+];
+const handleSubmit = async e => {
+  // If you're using Vuetify's validation, you'd check 'valid' here
+
+  const formData = new FormData(e.target);
+
+  try {
+    // This sends the data to Netlify in the background
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    });
+
+    // Once sent, navigate to your Thank You page
+    await router.push({
+      path: '/thanks',
+      query: {
+        firstname: firstname.value,
+        lastname: lastname.value,
+      },
+    });
+  } catch (error) {
+    console.error('Form submission error:', error);
+    alert('There was an issue sending your message.');
+  }
+};
 </script>
 <template>
-	<div>
-    <section
-      :class="`hero is-medium`"
-    >
+  <div>
+    <section :class="`hero is-medium`">
       <img
         alt
         class="hero-bg-img animate__animated animate__fadeIn animate__fast"
@@ -23,83 +80,87 @@ const email = ref('');
           </h1>
         </div>
       </div>
-
     </section>
     <div class="three-quarter-page">
       <div class="two-to-one-grid px-15">
-      <div>
-        <h2 class="text-center mb-5 font-weight-light text-h4 text-grey-darken-3">Contact Us</h2>
-        <div class="contact-grid ml-5 mr-3 mt-3 ">
-          <v-card class="animate__animated animate__fadeInUp">
-            <v-card-title class="text-h4 font-weight-regular">Hello!</v-card-title>
-            <v-card-subtitle class="text-h6">How can we help?</v-card-subtitle>
-            <v-card-text>
-              <v-img class="rounded-lg" width="80%" src="@/assets/people/martha0.jpg"></v-img>
-            </v-card-text>
-          </v-card>
-          <v-card  elevation="2" class="pa-5 animate__animated animate__slideInRight">
-            <v-form
-              method="POST"
-              netlify
-              name="contact"
-              class="py-3 px-3"
-            >
-              <!-- eslint-disable -->
-              <!-- Name -->
-              <v-text-field
-                prepend-inner-icon="mdi-account"
-                v-model="firstname"
-                :counter="10"
-                :rules="nameRules"
-                label="First name"
-                required
-                variant="filled"
-              />
-              <v-text-field
-                prepend-inner-icon="mdi-account"
-                v-model="lastname"
-                :counter="10"
-                :rules="nameRules"
-                label="Last name"
-                required
-                variant="filled"
-              />
-              <v-text-field
-                prepend-inner-icon="mdi-email"
-                v-model="email"
-                label="Email"
-                required
-                variant="filled"
-                :rules="emailRules"
-              />
+        <div>
+          <h2 class="text-center mb-5 font-weight-light text-h4 text-grey-darken-3">Contact Us</h2>
+          <div class="contact-grid ml-5 mr-3 mt-3 ">
+            <v-card class="animate__animated animate__fadeInUp">
+              <v-card-title class="text-h4 font-weight-regular">Hello!</v-card-title>
+              <v-card-subtitle class="text-h6">How can we help?</v-card-subtitle>
+              <v-card-text>
+                <v-img class="rounded-lg" src="@/assets/people/martha0.jpg" width="80%"></v-img>
+              </v-card-text>
+            </v-card>
+            <v-card class="pa-5 animate__animated animate__slideInRight" elevation="2">
+              <v-form
+                action="/thanks"
+                class="py-3 px-3"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                method="POST"
+                name="contact"
+                netlify
+                @submit.prevent="handleSubmit"
+              >
+                <!-- eslint-disable -->
+                <input name="form-name" type="hidden" value="contact" />
+                <!-- Name -->
+                <v-text-field
+                  v-model="firstname"
+                  :counter="10"
+                  :rules="nameRules"
+                  label="First name"
+                  prepend-inner-icon="mdi-account"
+                  required
+                  variant="filled"
+                />
+                <v-text-field
+                  v-model="lastname"
+                  :counter="10"
+                  :rules="nameRules"
+                  label="Last name"
+                  prepend-inner-icon="mdi-account"
+                  required
+                  variant="filled"
+                />
+                <v-text-field
+                  v-model="email"
+                  :rules="emailRules"
+                  label="Email"
+                  prepend-inner-icon="mdi-email"
+                  required
+                  variant="filled"
+                />
 
-              <v-textarea
-                prepend-inner-icon="mdi-message"
-                v-model="message"
-                label="Message"
-                required
-                variant="filled"
-              />
-              <div class="text-end">
-                <v-btn type="submit" size="large" density="comfortable" color="green-lighten-1">Contact Us</v-btn>
-              </div>
-
-            </v-form>
-          </v-card>
+                <v-textarea
+                  v-model="message"
+                  :rules="messageRules"
+                  label="Message"
+                  prepend-inner-icon="mdi-message"
+                  required
+                  variant="filled"
+                />
+                <div class="text-end">
+                  <v-btn color="green-lighten-1" density="comfortable" size="large" type="submit">Contact Us</v-btn>
+                </div>
+              </v-form>
+            </v-card>
+          </div>
+        </div>
+        <div class="border-s-sm pl-10">
+          <app-recent-articles />
         </div>
       </div>
-      <div class="border-s-sm pl-10">
-        <app-recent-articles />
-      </div>
     </div>
-    </div>
-	</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-   .contact-grid {
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    gap: 1rem;
-  }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 1rem;
+}
 </style>

@@ -1,89 +1,112 @@
-import { createWebHistory, createRouter } from 'vue-router'
- import { setTitle } from '@/services/utils.js';
-import HomeView from '@/views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import { setTitle } from '@/services/utils.js';
+import HomeView from '@/views/HomeView.vue';
 
 const routes = [
-  { path: '/',
+  {
+    path: '/',
     name: 'home',
     component: HomeView,
     meta: {
       title: 'Home',
     },
   },
-  { path: '/our-people',
+  {
+    path: '/our-people',
     name: 'people',
-    component: () => import('../views/OurPeople.vue'),
+    component: () => import('@/views/OurPeople.vue'),
     meta: {
       title: 'Our People',
     },
   },
-  { path: '/what-we-do',
+  {
+    path: '/what-we-do',
     name: 'what-we-do',
-    component: () => import('../views/WhatWeDo.vue'),
+    component: () => import('@/views/WhatWeDo.vue'),
     meta: {
       title: 'What We Do',
     },
   },
-  { path: '/books',
+  {
+    path: '/books',
     name: 'books',
-    component: () => import('../views/BooksView.vue'),
+    component: () => import('@/views/BooksView.vue'),
     meta: {
       title: 'Books',
     },
   },
-  { path: '/articles',
+  {
+    path: '/articles',
     name: 'articles',
-    component: () => import('../views/ArticlesView.vue'),
+    component: () => import('@/views/ArticlesView.vue'),
     meta: {
       title: 'Articles',
     },
   },
-  { path: '/articles/:id',
+  {
+    path: '/articles/:id',
     name: 'article',
-    component: () => import('../views/ArticleView.vue'),
+    component: () => import('@/views/ArticleView.vue'),
     meta: {
       title: 'Article :id',
     },
   },
-  { path: '/store',
+  {
+    path: '/store',
     name: 'store',
-    component: () => import('../views/StoreView.vue'),
+    component: () => import('@/views/StoreView.vue'),
     meta: {
       title: 'Store',
     },
   },
-  { path: '/contact',
+  {
+    path: '/contact',
     name: 'contact',
-    component: () => import('../views/ContactView.vue'),
+    component: () => import('@/views/ContactView.vue'),
     meta: {
       title: 'Contact',
     },
   },
-  { path: '/testimonials',
+  {
+    path: '/testimonials',
     name: 'testimonials',
-    component: () => import('../views/TestimonialsView.vue'),
+    component: () => import('@/views/TestimonialsView.vue'),
     meta: {
       title: 'Testimonials',
     },
   },
-]
+  {
+    path: '/thanks',
+    name: 'thanks',
+    component: () => import('@/views/ThankYou.vue'),
+    meta: {
+      title: 'Thanks You',
+    },
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFound.vue'), // Or just redirect to Home
+    meta: { title: '404 - Not Found' },
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  linkExactActiveClass: "active",
+  linkExactActiveClass: 'active',
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
   },
-})
+});
 // update title
 router.beforeEach((to, _, next) => {
   setTitle(to);
   next();
 });
 
-export default router
+export default router;
